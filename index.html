@@ -9,6 +9,36 @@
 <body>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="models/feedback.js"></script>
+
+<section id="feedback-page" class="page">
+<form id="feedback-form" action="" method="get">
+    <p>Name: <input type="text" name="name" />
+    </p>
+    <p>e-mail: <input type="text" name="email" />
+    </p>
+    <p>Location:</p>
+    <select name="location">
+        <option value="">West Slopes North</option>
+        <option value="">Stevens Pass</option>
+        <option value="">Snoqualmie Pass</option>
+        <option value="">West Slopes South</option>
+    </select>
+    <p>Comments:</p>
+    <textarea name="comments"></textarea>
+    <p>Rating: 
+        <br />
+        <input type="radio" name="rating" value="1" checked="checked" /> 1 
+        <input type="radio" name="rating" value="2" /> 2
+        <input type="radio" name="rating" value="3" /> 3
+        <input type="radio" name="rating" value="4" /> 4
+        <input type="radio" name="rating" value="5" /> 5
+    </p>
+    <input type="submit" name="submit" />
+
+
+    </p>
+</form>
+</section>
     
 </body>
 </html>
