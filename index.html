@@ -6,11 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Avalanche Forecast</title>
-
-    <script id="error-template" type="text/x-handlebars-template">
-        <h1>Error!</h1>
-        <p>Status: {{status}}. Status Details: {{statusText}}</p>
-    </script>
 </head>
 
 <body>
@@ -115,22 +110,41 @@
 <section id="about-page" class="page">
     <h1>THE TEAM:</h1>
     <img src="images/arthur.jpg">
-    <h2>Arthur:</h2>
-    <p>About Arthur</p>
-    <ul>
-        <li>Likes to research drive-in movie theaters</li>
-        <li>Looking for the perfect fun coding project</li>
-        <li>Walking</li>
-    </ul>
-    <ul class="social">
-            <li><a href="https://www.facebook.com/arthur.allen.18" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-            <li><a href="https://github.com/ErmineNotyours" class="icon fa-github"><span class="label">Github</span></a></li>
-    </ul>
+    <section id="about-arthur">
+            <h2>Arthur:</h2>
+            <h3>Random Things</h3>
+            <ul>
+                <li>Likes to research drive-in movie theaters</li>
+                <li>Looking for the perfect fun coding project</li>
+                <li>Walking</li>
+            </ul>
+            <h3>Links</h3>
+            <ul class="social">
+                    <li><a href="https://www.facebook.com/arthur.allen.18" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                    <li><a href="https://github.com/ErmineNotyours" class="icon fa-github"><span class="label">Github</span></a></li>
+            </ul>
+    </section>
+    <section id="about-amber">
+            <h2>Amber:</h2>
+            <h3>Random Things</h3>
+            <ul>
+                <li>I go hiking and rock climbing with my family</li>
+                <li></li>
+                <li></li>
+            </ul>
+            <h3>Links</h3>
+            <ul class="social">
+                    <li><a href="https://www.facebook.com/amgrkim" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                    <li><a href="https://github.com/amgranad" class="icon fa-github"><span class="label">Github</span></a></li>
+                    <li><a href="https://linkedin.com/in/ambergkim" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+            </ul>
+    </section>
 </section>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
 <script src="models/feedback.js"></script>
+<script src="views/about-view.js"></script>
 <script src="views/feedback-view.js"></script>
 <script src="views/about-view.js"></script>
 <script src="controllers/routes.js"></script>

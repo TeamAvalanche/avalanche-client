@@ -9,12 +9,15 @@ page('/*', (ctx, next) => {
 });
 
 page('/', () => {
-  app.homeCreateView.init();
+  app.Location.fetchRegion('olympics').then(info => {
+    console.log('location in route.js ', info);
+    app.homeCreateView.init();
+  }).catch(err => console.log(err));
 });
 
 page('/forecast', () => {
-  app.forecastCreateView.init();
-});
+    app.forecastCreateView.init();
+  });
 
 page('/feedback', () => {
   $('.page').hide();
