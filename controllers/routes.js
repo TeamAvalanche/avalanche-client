@@ -15,24 +15,28 @@ page('/', () => {
   }).catch(err => console.log(err));
 });
 
-page('/weather', () => {
-    $('.page').hide();
-    app.//add stuff
-});
+// page('/weather', () => {
+//     $('.page').hide();
+//     app.//add stuff
+// });
 
-page('/danger', () => {
-    $('.page').hide();
-    app.//add stuff
-});
+// page('/danger', () => {
+//     $('.page').hide();
+//     app.//add stuff
+// });
 
-page('/problems', () => {
-    $('.page').hide();
-    app.//add stuff
-});
+// page('/problems', () => {
+//     $('.page').hide();
+//     app.//add stuff
+// });
 
 page('/feedback', () => {
     $('.page').hide();
     app.feedbackCreateView.init();
+});
+
+page('/about', () => {
+    $('.page').hide();
 });
 
 page.start();
