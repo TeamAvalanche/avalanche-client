@@ -4,60 +4,35 @@ var app = app || {};
 
 (module => {
 
-  const __API_URL__ = 'http://www.nwac.us/api/v2/';
+  function errorCallback(err) {
+    console.error(err);
+    // app.errorView.initErrorPage(err);
+  }
 
-  function avalancheForecast() {}
-  //   avalancheDay1Date = [];
+  const _API_URL_ = 'http://localhost:3000';
 
-  //   function errorCallback(err) {
-  //     console.error(err);
-  // app.errorView.initErrorPage(err);
-  //}
+  function Location() { }
 
-  //     function avalancheForecast(region, weather, avDanger, avProblems) {
-  //         this.region = region,
-  //             this.weather = weather,
-  //             this.avDanger = avDanger,
-  //             this.avProblems = avProblems;
+  Location.fetchRegion = region => $.getJSON(_API_URL_ + '/nwac/' + region)
+    .catch(errorCallback);
 
-  //         avalancheForecast.fetchAll = () => $.getJSON(__API_URL__)
+  // const __API_URL__ = 'http://www.nwac.us/api/v2/avalanche-forecast/?format=json';
 
-  //     }
-  // });
+  // function Forecast(region, weather, avDanger, avProblems) {
+  //   this.region = region,
+  //   this.weather = weather,
+  //   this.avDanger = avDanger,
+  //   this.avProblems = avProblems;
 
-  avalancheForecast.getForecast = avalancheRegion => {
-    $.getJSON(`${__API_URL__}avalanche-region-forecast/?format=json&zone=${avalancheRegion}`)
-      .then(avalancheRegion => console.log(avalancheRegion))
-      .catch(error => console.log('error tell us', error));
-  };
+  //   Forecast.all [];
 
-  avalancheForecast.getForecast('olympics');
+  //   Forecast.fetchAll = () => $.getJSON(__API_URL__)
+  // }
 
-  module.avalancheForecast = avalancheForecast;
+  module.Location = Location;
 
 })(app);
-
-
-
-
-
-
-// let avalancheRegion = ''
-// function findRegion1(avalancheRegion){
-//     `${__API_URL__}avalanche-region-forecast/?format=json&zone=${avalancheRegion}`
+// let location = 'Olympics'
+// function findLocation(location){
+//     `http://www.nwac.us/api/v2/avalanche-region-forecast/?format=json&zone=${location}`
 // }
-
-// let findRegion = ''
-// function findRegion(
-
-// let date = function (
-//     if (res.objects[i].day1_date === "date") {
-//         .then (avalancheDay1Date => arr.push(avalancheDay1Date),
-//         console.log("date")
-//         ).catch(errorCallback);
-// });
-
-// avalancheRegion.fetchOne = (id) => $.getJSON(_API_URL_ + '/api/v1/' + id).catch(errorCallback);
-
-
-// // var = new Date()
