@@ -83,6 +83,66 @@
     <script src="views/error-view.js"></script>
     <script src="controllers/routes.js"></script>
 
+<section id="feedback-page" class="page">
+<form id="feedback-form" action="" method="get">
+    <p>Name: <input type="text" name="name" />
+    </p>
+    <p>e-mail: <input type="text" name="email" />
+    </p>
+    <p>Location:</p>
+    <select name="location">
+        <option value="">West Slopes North</option>
+        <option value="">Stevens Pass</option>
+        <option value="">Snoqualmie Pass</option>
+        <option value="">West Slopes South</option>
+    </select>
+    <p>Comments:</p>
+    <textarea name="comments"></textarea>
+    <p>Rating: 
+        <br />
+        <input type="radio" name="rating" value="1" checked="checked" /> 1 
+        <input type="radio" name="rating" value="2" /> 2
+        <input type="radio" name="rating" value="3" /> 3
+        <input type="radio" name="rating" value="4" /> 4
+        <input type="radio" name="rating" value="5" /> 5
+    </p>
+    <input type="submit" name="submit" />
+
+    </p>
+    </form>
+</section>
+
+<section id="about-page" class="page">
+    <h1>THE TEAM:</h1>
+    <img src="images/arthur.jpg">
+    <h2>Arthur:</h2>
+    <p>About Arthur</p>
+    <ul>
+        <li>Likes to research drive-in movie theaters</li>
+        <li>Looking for the perfect fun coding project</li>
+        <li>Walking</li>
+    </ul>
+    <ul class="social">
+            <li><a href="https://www.facebook.com/arthur.allen.18" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+            <li><a href="https://github.com/ErmineNotyours" class="icon fa-github"><span class="label">Github</span></a></li>
+    </ul>
+</section>
+
+<!-- nav tags at the bottom -->
+<div class="navbar">
+    <a href="#weather">Weather</a>
+    <!-- need submenus -->
+    <a href="#danger">Avalanche Danger</a>
+    <a href="#problems">Avalanch Problems</a>
+    <a href="/feedback">Feedback</a>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+<script src="models/feedback.js"></script>
+<script src="views/feedback-view.js"></script>
+<script src="controllers/routes.js"></script>
+  
 </body>
 
 </html>
