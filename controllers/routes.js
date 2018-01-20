@@ -23,6 +23,7 @@ page('/feedback', () => {
 
 page('/about', () => {
     $('.page').hide();
+    app.aboutCreateView.init();
 });
 
 page.start();
