@@ -7,7 +7,7 @@ var app = app || {};
   const _API_URL_ = 'http://localhost:3000';
 
   function Feedback() { }
-  
+
   function errorCallback(err) {
     console.error(err);
     // app.errorView.initErrorPage(err);

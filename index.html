@@ -8,9 +8,6 @@
 </head>
 <body>
 
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="models/feedback.js"></script>
-
 <section id="feedback-page" class="page">
 <form id="feedback-form" action="" method="get">
     <p>Name: <input type="text" name="name" />
@@ -38,8 +35,22 @@
 
 
     </p>
-</form>
+    </form>
 </section>
-    
+
+<!-- nav tags at the bottom -->
+<div class="navbar">
+    <a href="#weather">Weather</a>
+    <!-- need submenus -->
+    <a href="#danger">Avalanche Danger</a>
+    <a href="#problems">Avalanch Problems</a>
+    <a href="/feedback">Feedback</a>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+<script src="models/feedback.js"></script>
+<script src="views/feedback-view.js"></script>
+<script src="controllers/routes.js"></script>
 </body>
 </html>
