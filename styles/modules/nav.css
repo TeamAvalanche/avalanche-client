@@ -1,0 +1,44 @@
+.navbar {
+    background-color: #0b1828;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f3f1f0;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar a:hover {
+    background-color: #f3f1f0;
+    color: #0b1828;
+}
+
+.navbar a.active {
+    background-color: #2a405a;
+    color: #f3f1f0;
+}
+
+.navbar .icon {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar.responsive a.icon {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+    .navbar.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }

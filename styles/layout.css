@@ -1,0 +1,10 @@
+h2, p {
+    display: block;
+    padding: 5% 10%;
+    text-align: center;
+}
+
+#home-container {
+    margin: 0 1.5% 0 1.5%;
+    padding: 20px 15px;
+}
