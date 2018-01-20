@@ -13,8 +13,11 @@ var app = app || {};
 
   function Location() { }
 
-  Location.fetchRegion = region => $.getJSON(_API_URL_ + '/nwac/' + region)
-    .catch(errorCallback);
+  Location.fetchRegion = (region, callback) => {
+    return $.getJSON(_API_URL_ + '/nwac/' + region)
+      .then((data) => callback(data))
+      .catch(errorCallback);
+  };
 
   // const __API_URL__ = 'http://www.nwac.us/api/v2/avalanche-forecast/?format=json';
 
