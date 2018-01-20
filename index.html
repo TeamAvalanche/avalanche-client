@@ -9,7 +9,6 @@
 </head>
 
 <body>
-
     <section id="home-page" class="page">
         <h1>Home Page</h1>
     </section>
@@ -80,28 +79,31 @@
 
 <section id="feedback-page" class="page">
 <form id="feedback-form" action="" method="get">
-    <p>Name: <input type="text" name="name" />
+    <p>Name: <input type="text" id="name" name="name" />
     </p>
-    <p>e-mail: <input type="text" name="email" />
+    <p>e-mail: <input type="text" id="email" name="email" />
     </p>
     <p>Location:</p>
-    <select name="location">
-        <option value="">West Slopes North</option>
-        <option value="">Stevens Pass</option>
-        <option value="">Snoqualmie Pass</option>
-        <option value="">West Slopes South</option>
+    <select name="location" id="location">
+        <option value="West Slopes North">West Slopes North</option>
+        <option value="Stevens Pass">Stevens Pass</option>
+        <option value="Snoqualmie Pass">Snoqualmie Pass</option>
+        <option value="West Slopes South">West Slopes South</option>
     </select>
     <p>Comments:</p>
-    <textarea name="comments"></textarea>
+    <textarea name="comments" id="comments"></textarea>
+
     <p>Rating: 
-        <br />
-        <input type="radio" name="rating" value="1" checked="checked" /> 1 
-        <input type="radio" name="rating" value="2" /> 2
-        <input type="radio" name="rating" value="3" /> 3
-        <input type="radio" name="rating" value="4" /> 4
-        <input type="radio" name="rating" value="5" /> 5
+        <br>
+        <div id="radios">
+            <input type="radio" id="r1" name="rating" value="1" checked="checked"/> 1 
+            <input type="radio" id="r2" name="rating" value="2"/> 2
+            <input type="radio" id="r3" name="rating" value="3"/> 3
+            <input type="radio" id="r4" name="rating" value="4"/> 4
+            <input type="radio" id="r5" name="rating" value="5"/> 5
+        </div>
     </p>
-    <input type="submit" name="submit" />
+    <input type="submit" name="submit"/>
 
     </p>
     </form>
@@ -141,13 +143,17 @@
     </section>
 </section>
 
+
+
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
 <script src="models/feedback.js"></script>
-<script src="views/about-view.js"></script>
+<script src="models/location.js"></script>
 <script src="views/feedback-view.js"></script>
+<script src="views/home-view.js"></script>
 <script src="views/about-view.js"></script>
 <script src="controllers/routes.js"></script>
+
   
 </body>
 

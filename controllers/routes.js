@@ -9,10 +9,7 @@ page('/*', (ctx, next) => {
 });
 
 page('/', () => {
-  app.Location.fetchRegion('olympics').then(info => {
-    console.log('location in route.js ', info);
-    app.homeCreateView.init();
-  }).catch(err => console.log(err));
+  app.homeCreateView.init();
 });
 
 page('/forecast', () => {
