@@ -1,12 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Avalanche Forecast</title>
 </head>
+
 <body>
+    <section id="home-page" class="page">
+        <h1>Home Page</h1>
+    </section>
+
+    <section id="forecast-page" class="page">
+        <select name="forecast-select" id="forecast-select">
+            <option value="" disabled selected>Select Your Region:</option>
+            <option value="cascade-west-north-baker">Mt. Baker</option>
+            <option value="cascade-west-stevens-pass">Stevens Pass</option>
+            <option value="cascade-west-snoqualmie-pass">Snoqualmie Pass</option>
+            <option value="cascade-west-central">Chrystal/Mt. Rainier</option>
+        </select>
+        <div id="forecast-info">
+
+        </div>
+    </section>
+
+    <section id="feedback-page" class="page">
+        <form id="feedback-form" action="" method="get">
+            <p>Name:
+                <input type="text" name="name" />
+            </p>
+            <p>e-mail:
+                <input type="text" name="email" />
+            </p>
+            <p>Location:</p>
+            <select name="location">
+                <option value="cascade-west-north-baker">Mt. Baker</option>
+                <option value="cascade-west-stevens-pass">Stevens Pass</option>
+                <option value="cascade-west-snoqualmie-pass">Snoqualmie Pass</option>
+                <option value="cascade-west-central">Crystal/Mt. Rainier</option>
+            </select>
+            <p>Comments:</p>
+            <textarea name="comments"></textarea>
+            <p>Rating:
+                <br />
+                <input type="radio" name="rating" value="1" checked="checked" /> 1
+                <input type="radio" name="rating" value="2" /> 2
+                <input type="radio" name="rating" value="3" /> 3
+                <input type="radio" name="rating" value="4" /> 4
+                <input type="radio" name="rating" value="5" /> 5
+            </p>
+            <input type="submit" name="submit" />
+
+        </form>
+    </section>
+    <section class="error-view page"></section>
+
+    <!-- nav tags at the bottom -->
+    <div class="navbar">
+        <a href="/">Home</a>
+        <!-- need submenus -->
+        <a href="/forecast">Avalanche Forecast</a>
+        <a href="/about">About</a>
+        <a href="/feedback">Feedback</a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+    <script src="models/feedback.js"></script>
+    <script src="models/location.js"></script>
+    <script src="views/home-view.js"></script>
+    <script src="views/forecast-view.js"></script>
+    <script src="views/feedback-view.js"></script>
+    <script src="views/error-view.js"></script>
+    <script src="controllers/routes.js"></script>
 
 <section id="feedback-page" class="page">
 <form id="feedback-form" action="" method="get">
@@ -40,24 +109,52 @@
     </form>
 </section>
 
-<!-- nav tags at the bottom -->
-<div class="navbar">
-    <a href="#weather">Weather</a>
-    <!-- need submenus -->
-    <a href="#danger">Avalanche Danger</a>
-    <a href="#problems">Avalanch Problems</a>
-    <a href="/feedback">Feedback</a>
-</div>
+<section id="about-page" class="page">
+    <h1>THE TEAM:</h1>
+    <img src="images/arthur.jpg">
+    <section id="about-arthur">
+            <h2>Arthur:</h2>
+            <h3>Random Things</h3>
+            <ul>
+                <li>Likes to research drive-in movie theaters</li>
+                <li>Looking for the perfect fun coding project</li>
+                <li>Walking</li>
+            </ul>
+            <h3>Links</h3>
+            <ul class="social">
+                    <li><a href="https://www.facebook.com/arthur.allen.18" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                    <li><a href="https://github.com/ErmineNotyours" class="icon fa-github"><span class="label">Github</span></a></li>
+            </ul>
+    </section>
+    <section id="about-amber">
+            <h2>Amber:</h2>
+            <h3>Random Things</h3>
+            <ul>
+                <li>I go hiking and rock climbing with my family</li>
+                <li></li>
+                <li></li>
+            </ul>
+            <h3>Links</h3>
+            <ul class="social">
+                    <li><a href="https://www.facebook.com/amgrkim" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                    <li><a href="https://github.com/amgranad" class="icon fa-github"><span class="label">Github</span></a></li>
+                    <li><a href="https://linkedin.com/in/ambergkim" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+            </ul>
+    </section>
+</section>
 
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
-<script src="views/feedback-view.js"></script>
-<script src="views/home-view.js"></script>
 <script src="models/feedback.js"></script>
 <script src="models/location.js"></script>
+<script src="views/feedback-view.js"></script>
+<script src="views/home-view.js"></script>
+<script src="views/about-view.js"></script>
 <script src="controllers/routes.js"></script>
+
   
 </body>
+
 </html>

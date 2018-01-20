@@ -14,7 +14,7 @@ var app = app || {};
   }
 
   Feedback.fetchAll = () => $.getJSON(_API_URL_ + '/api/v1/feedback').done(function (json) {
-    console.log("JSON Data: ", json);
+    console.log('JSON Data: ', json);
   })
     .catch(errorCallback);
 
