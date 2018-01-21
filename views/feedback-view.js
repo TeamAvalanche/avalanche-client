@@ -9,17 +9,31 @@ var app = app || {};
     $('#feedback-page').show();
   };
 
-  $('#feedback-form').on('submit', function (e) {
+  $('#feedback-form').on('submit',(e) => {
     e.preventDefault();
+    console.log('this is after you hit submit if feedback form');
     let feedback = {
       name: $('#name').val(),
       email: $('#email').val(),
       location: $('#location').val(),
       comments: $('#comments').val(),
-      rating: $('#rating').val()
+      rating: parseInt($('input:checked').val())
     };
-    app.Feedback.create(feedback).then(() => console.log('Feedback page'));
+    console.log(feedback);
+
+    app.Feedback.create(feedback)
+      .then( () => {
+        clearFields();
+      });
   });
   module.feedbackCreateView = feedbackCreateView;
 
 })(app);
+
+function clearFields() {
+  $('#name').val("");
+  $('#email').val("");
+  $('#location').val("");
+  $('#comments').val("");
+  $('#rating').val("");
+}

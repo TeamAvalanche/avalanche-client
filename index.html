@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Avalanche Forecast</title>
+
 
     <script id="error-template" type="text/x-handlebars-template">
         <h1>Error!</h1>
@@ -17,12 +19,13 @@
     <meta property="og:description" content="Know the avalanche risk before you go" />
     <meta property="og:image" content="images/open_graph_image.jpg" />
 
+
 </head>
 
 <body>
-
     <section id="home-page" class="page">
         <h1>Home Page</h1>
+        <div id="random-review"></div>
     </section>
 
     <section id="forecast-page" class="page">
@@ -91,28 +94,31 @@
 
 <section id="feedback-page" class="page">
 <form id="feedback-form" action="" method="get">
-    <p>Name: <input type="text" name="name" />
+    <p>Name: <input type="text" id="name" name="name" />
     </p>
-    <p>e-mail: <input type="text" name="email" />
+    <p>e-mail: <input type="text" id="email" name="email" />
     </p>
     <p>Location:</p>
-    <select name="location">
-        <option value="">West Slopes North</option>
-        <option value="">Stevens Pass</option>
-        <option value="">Snoqualmie Pass</option>
-        <option value="">West Slopes South</option>
+    <select name="location" id="location">
+        <option value="West Slopes North">West Slopes North</option>
+        <option value="Stevens Pass">Stevens Pass</option>
+        <option value="Snoqualmie Pass">Snoqualmie Pass</option>
+        <option value="West Slopes South">West Slopes South</option>
     </select>
     <p>Comments:</p>
-    <textarea name="comments"></textarea>
+    <textarea name="comments" id="comments"></textarea>
+
     <p>Rating: 
-        <br />
-        <input type="radio" name="rating" value="1" checked="checked" /> 1 
-        <input type="radio" name="rating" value="2" /> 2
-        <input type="radio" name="rating" value="3" /> 3
-        <input type="radio" name="rating" value="4" /> 4
-        <input type="radio" name="rating" value="5" /> 5
+        <br>
+        <div id="radios">
+            <input type="radio" id="r1" name="rating" value="1" checked="checked"/> 1 
+            <input type="radio" id="r2" name="rating" value="2"/> 2
+            <input type="radio" id="r3" name="rating" value="3"/> 3
+            <input type="radio" id="r4" name="rating" value="4"/> 4
+            <input type="radio" id="r5" name="rating" value="5"/> 5
+        </div>
     </p>
-    <input type="submit" name="submit" />
+    <input type="submit" name="submit"/>
 
     </p>
     </form>
@@ -121,25 +127,64 @@
 <section id="about-page" class="page">
     <h1>THE TEAM:</h1>
     <img src="images/arthur.jpg">
-    <h2>Arthur:</h2>
-    <p>About Arthur</p>
-    <ul>
-        <li>Likes to research drive-in movie theaters</li>
-        <li>Looking for the perfect fun coding project</li>
-        <li>Walking</li>
-    </ul>
-    <ul class="social">
-            <li><a href="https://www.facebook.com/arthur.allen.18" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-            <li><a href="https://github.com/ErmineNotyours" class="icon fa-github"><span class="label">Github</span></a></li>
-    </ul>
+    <section id="about-arthur">
+            <h2>Arthur:</h2>
+            <h3>Random Things</h3>
+            <ul>
+                <li>Likes to research drive-in movie theaters</li>
+                <li>Looking for the perfect fun coding project</li>
+                <li>Walking</li>
+            </ul>
+            <h3>Links</h3>
+            <ul class="social">
+                    <li><a href="https://www.facebook.com/arthur.allen.18" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                    <li><a href="https://github.com/ErmineNotyours" class="icon fa-github"><span class="label">Github</span></a></li>
+            </ul>
+    </section>
+    <section id="about-amber">
+            <h2>Amber:</h2>
+            <h3>Random Things</h3>
+            <ul>
+                <li>I go hiking and rock climbing with my family</li>
+                <li></li>
+                <li></li>
+            </ul>
+            <h3>Links</h3>
+            <ul class="social">
+                    <li><a href="https://www.facebook.com/amgrkim" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                    <li><a href="https://github.com/amgranad" class="icon fa-github"><span class="label">Github</span></a></li>
+                    <li><a href="https://linkedin.com/in/ambergkim" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+            </ul>
+    </section>
+    <img src="images/brandon.jpg">
+    <section id="about-brandon">
+            <h2>Brandon:</h2>
+            <h3>Random Things</h3>
+            <ul>
+                <li>I live on a 65' retired salmon fishing boat on South Lake Union</li>
+                <li>Circumnavigated the the world in 19 days while in the US Navy</li>
+                <li>I enjoy camping and hiking with my family</li>
+            </ul>
+            <h3>Links</h3>
+            <ul class="social">
+                    <li><a href="https://www.facebook.com/brandon.buchholz" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                    <li><a href="https://github.com/bjbuchholz" class="icon fa-github"><span class="label">Github</span></a></li>
+                    <li><a href="https://www.linkedin.com/in/brandon-buchholz/" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+            </ul>
+    </section>
 </section>
+
+
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
 <script src="models/feedback.js"></script>
+<script src="models/location.js"></script>
 <script src="views/feedback-view.js"></script>
+<script src="views/home-view.js"></script>
 <script src="views/about-view.js"></script>
 <script src="controllers/routes.js"></script>
+
   
 </body>
 

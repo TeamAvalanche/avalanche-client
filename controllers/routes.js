@@ -13,8 +13,8 @@ page('/', () => {
 });
 
 page('/forecast', () => {
-  app.forecastCreateView.init();
-});
+    app.forecastCreateView.init();
+  });
 
 page('/feedback', () => {
   $('.page').hide();
