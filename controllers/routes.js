@@ -13,27 +13,17 @@ page('/', () => {
 });
 
 page('/forecast', () => {
-  app.forecastCreateView.init();
-});
-
-// page('/weather', () => {
-//     $('.page').hide();
-//     app. //add stuff
-// });
-
-// page('/danger', () => {
-//     $('.page').hide();
-//     app. //add stuff
-// });
-
-// page('/problems', () => {
-//     $('.page').hide();
-//     app. //add stuff
-// });
+    app.forecastCreateView.init();
+  });
 
 page('/feedback', () => {
   $('.page').hide();
   app.feedbackCreateView.init();
+});
+
+page('/about', () => {
+    $('.page').hide();
+    app.aboutCreateView.init();
 });
 
 page.start();

@@ -4,7 +4,7 @@ var app = app || {};
 
 (module => {
 
-  const _API_URL_ = 'http://localhost:3000';
+  const _API_URL_ = 'https://team-avalanche.herokuapp.com';
 
   function Feedback() { }
 
@@ -13,15 +13,18 @@ var app = app || {};
     // app.errorView.initErrorPage(err);
   }
 
-  Feedback.fetchAll = () => $.getJSON(_API_URL_ + '/api/v1/feedback').done(function (json) {
-    console.log("JSON Data: ", json);
-  })
-    .catch(errorCallback);
+  Feedback.fetchAll = (callback) => $.getJSON(_API_URL_ + '/api/v1/feedback').then(data => callback(data)).catch(errorCallback);
 
   Feedback.create = feedback => {
     console.log('feedback created from: ' + feedback.name);
     return $.post(_API_URL_ + '/api/v1/feedback', feedback).catch(errorCallback);
   };
+
+  Feedback.fetchOne = (id, callback) => $.getJSON(_API_URL_ + '/api/v1/feedback/' + id).then(data => callback(data)).catch(errorCallback);
+
+  Feedback.fetchIds = (callback) => $.getJSON(_API_URL_ + '/api/v1/feedbackids').then(data => callback(data)).catch(errorCallback);
+
+  // Feedback.ids = () => $.getJSON(_API_URL_ + '/api/v1/feedback/' + id).then(data => console.log('fetch one data ', data)).catch(errorCallback);
 
   Feedback.deleteOne = id => {
     return $.ajax({
