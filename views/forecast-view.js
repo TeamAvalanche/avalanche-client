@@ -8,11 +8,6 @@ var app = app || {};
 
   const $view = $('#forecast-page');
 
-  forecastCreateView.init = () => {
-    console.log('forecast create view init');
-    $view.show();
-  };
-
   forecastCreateView.displayForecast = (locationObject) => {
     $('#forecast-info').empty();
     let location = locationObject.objects[0].zones[0].zone_name;
@@ -42,10 +37,22 @@ var app = app || {};
   //     else if val =
   //   });
 
+  forecastCreateView.init = () => {
+    if (localStorage.getItem('region')) {
+      let regionString = localStorage.getItem('region');
+      let regionParsed = JSON.parse(regionString);
+      console.log('region parsed local storage ', regionParsed);
+      app.Location.fetchRegion(regionParsed, forecastCreateView.displayForecast);
+    }
+    $view.show();
+  };
+
   $('#forecast-select').on('change', function(e) {
     e.preventDefault();
     let region = $('#forecast-select').val();
     app.Location.fetchRegion(region, forecastCreateView.displayForecast);
+    let regionString = JSON.stringify(region);
+    localStorage.setItem('region', regionString);
   });
 
   module.forecastCreateView = forecastCreateView;
