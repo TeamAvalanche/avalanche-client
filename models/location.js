@@ -4,7 +4,7 @@ var app = app || {};
 
 (module => {
 
-  const _API_URL_ = 'http://localhost:3000';
+  const _API_URL_ = 'https://team-avalanche.herokuapp.com';
 
   function Location() { }
 
