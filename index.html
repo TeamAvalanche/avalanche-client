@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules/modules.css">
     <link rel="stylesheet" href="styles/modules/nav.css">
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
 
     <script id="error-template" type="text/x-handlebars-template">
         <h1>Error!</h1>
@@ -20,7 +21,9 @@
 <body>
 
     <section id="home-page" class="page">
-        <h1>Home</h1>
+        <header>
+            <img id="page-logo" src="images/logo.jpg" alt="Team Avalanche">
+        </header>
         <div class="home-container">
             <h2>ABOUT THIS APP:</h2>
             <p>NWAC Avalanche Forecast app...</p>
@@ -36,19 +39,28 @@
     </section>
 
     <section id="forecast-page" class="page">
-        <select name="forecast-select" id="forecast-select">
-            <option value="" disabled selected>Select Your Region:</option>
+            <header>
+                <img id="page-logo" src="images/logo.jpg" alt="Team Avalanche">
+            </header>
+        <h1>Select Your Location:</h1>    
+        <select name="forecast-select" id="forecast-select" class="dropdown-content">
+            <option value="" disabled selected>--Select--</option>
             <option value="cascade-west-north-baker">Mt. Baker</option>
             <option value="cascade-west-stevens-pass">Stevens Pass</option>
             <option value="cascade-west-snoqualmie-pass">Snoqualmie Pass</option>
             <option value="cascade-west-central">Chrystal/Mt. Rainier</option>
         </select>
-        <div id="forecast-info">
+        </div>
+        <div id="forecast-info"> 
+            <!-- Forecast page will have 3 columns h1: Elevation h2: Today h3: Tomorrow. Triangles and info underneath each header -->
 
         </div>
     </section>
 
     <section id="feedback-page" class="page">
+            <header>
+                <img id="page-logo" src="images/logo.jpg" alt="Team Avalanche">
+            </header>
         <form id="feedback-form" action="" method="get">
             <p>Name:
                 <input type="text" name="name" />
@@ -80,7 +92,7 @@
     <section class="error-view page"></section>
 
     <!-- nav tags at the bottom -->
-    <div class="navbar" id="bottomNavbar">
+    <div class="navbar">
         <a href="/">Home</a>
         <!-- need submenus -->
         <a href="/forecast">Forecast</a>

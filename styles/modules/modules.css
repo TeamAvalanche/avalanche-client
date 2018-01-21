@@ -1,0 +1,22 @@
+/* Avalanche Danger Levels */
+.High {
+    color: red;
+}
+
+.Considerable {
+    color: orange;
+}
+
+.Moderate  {
+    color: yellow;
+}
+
+.Low {
+    color: green;
+}
+
+
+
+.triangles {
+    width: 30%;
+}

@@ -20,16 +20,27 @@ var app = app || {};
     let aboveDangerLevel = locationObject.objects[0].day1_danger_elev_high;
     let atDangerLevel = locationObject.objects[0].day1_danger_elev_middle;
     let belowDangerLevel = locationObject.objects[0].day1_danger_elev_low;
+    // let aboveDangerLevel2 = locationObject.objects[0].day2_danger_elev_high;
+    // let atDangerLevel2 = locationObject.objects[0].day2_danger_elev_middle;
+    // let belowDangerLevel2 = locationObject.objects[0].day2_danger_elev_low;
     $('#forecast-info').append(`
-    <h1>Location</h1>
+    <h2>Location</h2>
     <p>${location}</p>
-    <h1>Bottom Line Summary</h1>
+    <h2>Bottom Line Summary</h2>
     <p>${summary}</p>
-    <img src="images/above-treeline.png"><p id="above-treeline" class="${aboveDangerLevel}">${aboveDangerLevel}</p>
-    <img src="images/at-treeline.png"><p id="at-treeline" class="${atDangerLevel}">${atDangerLevel}</p>
-    <img src="images/below-treeline.png"><p id="below-treeline" class="${belowDangerLevel}">${belowDangerLevel}</p>
+    <img class="triangles" src="images/above-treeline.png"><p id="above-treeline" class="${aboveDangerLevel}">${aboveDangerLevel}</p>
+    <img class="triangles" src="images/at-treeline.png"><p id="at-treeline" class="${atDangerLevel}">${atDangerLevel}</p>
+    <img class="triangles" src="images/below-treeline.png"><p id="below-treeline" class="${belowDangerLevel}">${belowDangerLevel}</p>
     `);
   };
+
+  //   $('#banner-image').on('change', function(e) {
+  //     e.preventDefault();
+  //     let bannerImage = $('#banner-image')
+  //     if val = 'cascade-west-north-baker'
+  //         bannerImage = 'images/Mt.Baker.jpg'
+  //     else if val =
+  //   });
 
   $('#forecast-select').on('change', function(e) {
     e.preventDefault();
@@ -39,4 +50,4 @@ var app = app || {};
 
   module.forecastCreateView = forecastCreateView;
 
-})(app); 
+})(app);

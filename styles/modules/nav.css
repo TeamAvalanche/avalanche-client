@@ -4,6 +4,7 @@
     position: fixed;
     bottom: 0;
     width: 100%;
+    padding-bottom: .5em;
 }
 
 .navbar a {
@@ -11,9 +12,10 @@
     display: block;
     color: #f3f1f0;
     text-align: center;
-    padding: 14px 16px;
+    padding: 20px 16px;
     text-decoration: none;
-    font-size: 17px;
+    /* border: 3px solid #f3f1f0; */
+    font-size: 18px;
 }
 
 .navbar a:hover {
