@@ -1,7 +1,9 @@
-**Desgn Worth Website and InvoQuote App**
+
+=======
+**Team Avalanche App**
 =======
 
-##Table of Contents
+## Table of Contents
 * [Team Avalance Members](#)
 * [Technologies Used](#technologies)
 * [How to use this App](#how-to-use)
@@ -43,8 +45,9 @@ The Northwest Avalanch Center provides up-to-date and accurate information for p
 ## Misc.
 * 
 
-#Special Thanks to
+# Special Thanks to
 * [Northwest Avalanch Center](https://www.nwac.us/) for letting our team use their API!
 * [Nicolas Gallagher](https://github.com/necolas) for normalize.css
 * [Font Awesome by Dave Gandy](http://fontawesome.io)
 * [Dot Navigation by Chris](https://codepen.io/zuhloobie/pen/RaLJOK)
+* [Animate.css](https://daneden.github.io/animate.css/)
