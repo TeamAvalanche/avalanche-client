@@ -7,10 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Avalanche Forecast</title>
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules/modules.css">
     <link rel="stylesheet" href="styles/modules/nav.css">
+    <link rel="stylesheet" href="styles/modules/dot-nav.css">
     <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
 
 
@@ -47,6 +49,18 @@
     </section>
 
     <section id="forecast-page" class="page">
+        <div class="container">  
+             <div class="sidebar">
+              <nav>
+                 <ul>
+                     <li><a href="#" class="dot"><span>Top</span></a></li>
+                     <li><a href="#forecast-info" class="dot"><span>Info</span></a></li>
+                     <li><a href="#services" class="dot"><span>Problems</span></a></li>
+                  </ul>
+              </nav>
+            </div>
+        </div>  
+                <!-- nav conatainer -->
             <header>
                 <img id="page-logo" src="images/logo.jpg" alt="Team Avalanche">
             </header>
@@ -213,6 +227,7 @@
 <script src="views/home-view.js"></script>
 <script src="views/about-view.js"></script>
 <script src="controllers/routes.js"></script>
+<script src="views/dot-nav.js"></script>
 
   
 </body>

@@ -47,3 +47,4 @@ The Northwest Avalanch Center provides up-to-date and accurate information for p
 * [Northwest Avalanch Center](https://www.nwac.us/) for letting our team use their API!
 * [Nicolas Gallagher](https://github.com/necolas) for normalize.css
 * [Font Awesome by Dave Gandy](http://fontawesome.io)
+* [Dot Navigation by Chris](https://codepen.io/zuhloobie/pen/RaLJOK)
