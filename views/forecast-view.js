@@ -14,18 +14,31 @@ var app = app || {};
     let summary = locationObject.objects[0].bottom_line_summary;
     let aboveDangerLevel = locationObject.objects[0].day1_danger_elev_high;
     let atDangerLevel = locationObject.objects[0].day1_danger_elev_middle;
-    let belowDangerLevel = locationObject.objects[0].day1_danger_elev_low;
-    // let aboveDangerLevel2 = locationObject.objects[0].day2_danger_elev_high;
-    // let atDangerLevel2 = locationObject.objects[0].day2_danger_elev_middle;
-    // let belowDangerLevel2 = locationObject.objects[0].day2_danger_elev_low;
+    let belowDangerLevel = locationObject.objects[0].day1_danger_elev_low2;
+    // let aboveDangerLevel2 = locationObject.objects[0].day1_danger_elev_high2;
+    // let atDangerLevel2 = locationObject.objects[0].day1_danger_elev_middle2;
+    // let belowDangerLevel2 = locationObject.objects[0].day1_danger_elev_low2;
+    let problems = locationObject.objects[0].problems[0].likelihood;
+    console.log(problems, 'problems');
     $('#forecast-info').append(`
     <h2>Location</h2>
     <p>${location}</p>
     <h2>Bottom Line Summary</h2>
     <p>${summary}</p>
-    <img class="triangles" src="images/above-treeline.png"><p id="above-treeline" class="${aboveDangerLevel}">${aboveDangerLevel}</p>
-    <img class="triangles" src="images/at-treeline.png"><p id="at-treeline" class="${atDangerLevel}">${atDangerLevel}</p>
-    <img class="triangles" src="images/below-treeline.png"><p id="below-treeline" class="${belowDangerLevel}">${belowDangerLevel}</p>
+    <div class="triangle-container">
+        <div class="triangle-holder">
+            <img class="triangles" src="images/above-treeline.png"><p id="above-treeline" class="${aboveDangerLevel}">${aboveDangerLevel}</p>
+        </div>
+        <div class="triangle-holder">
+            <img class="triangles" src="images/at-treeline.png"><p id="at-treeline" class="${atDangerLevel}">${atDangerLevel}</p>
+        </div>
+        <div class="triangle-holder">
+            <img class="triangles" src="images/below-treeline.png"><p id="below-treeline" class="${belowDangerLevel}">${belowDangerLevel}</p>
+        </div>
+    </div>
+    <h2>Problems</h2>
+    ${problems}
+
     `);
   };
 

@@ -28,3 +28,8 @@ h2, h3 {
     background: none;
     width: 15%;
 }
+
+#forecast-page {
+    padding-bottom: 10vh;
+    margin-bottom: 10vh;
+}
