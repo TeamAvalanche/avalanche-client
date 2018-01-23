@@ -24,7 +24,36 @@ h2, h3 {
 
 #page-logo {
     display: block;
+    margin-top: 10%;
     margin: 0 auto;
     background: none;
     width: 15%;
+}
+/* Form CSS */
+#name, #email {
+    background-color: lightgray;
+    width: 35%;
+    margin-top: 2%;
+}
+#comments {
+    background-color: lightgray;
+    width: 50%;
+    margin-left: 24%;
+    margin-top: -8%;
+}
+
+#location {
+    border: 1px solid black;
+    background-color: lightgray;
+    width: 40%;
+    margin-left: 31%;
+}   
+
+#feedback-form, #submit  {
+    width: 100%;
+    margin: auto;
+
+}
+#random-review {
+    text-align: center;
 }
