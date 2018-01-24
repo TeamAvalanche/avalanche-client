@@ -11,7 +11,6 @@ var app = app || {};
 
   $('#feedback-form').on('submit',(e) => {
     e.preventDefault();
-    console.log('this is after you hit submit if feedback form');
     let feedback = {
       name: $('#name').val(),
       email: $('#email').val(),
@@ -19,7 +18,6 @@ var app = app || {};
       comments: $('#comments').val(),
       rating: parseInt($('input:checked').val())
     };
-    console.log(feedback);
 
     app.Feedback.create(feedback)
       .then( () => {

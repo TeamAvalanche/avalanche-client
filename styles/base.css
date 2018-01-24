@@ -30,6 +30,18 @@ h3 {
     margin-bottom: 10px;
 }
 
+#comments {
+    background-color: lightgray;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: -8%;
+}
+
+#location {
+    background-color: lightgray;
+    width: 50%;
+    margin: 0 auto;
+
 h4 {
     font-size: 18px;
     font-weight: bold;
@@ -40,6 +52,7 @@ h4 {
 p {
     line-height: 1.5;
     padding: 5% 10%;
+
 }
 
 p, li {
