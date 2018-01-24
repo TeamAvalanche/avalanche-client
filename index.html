@@ -12,11 +12,12 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules/modules.css">
+    <link rel="stylesheet" href="styles/modules/danger-levels.css">
     <link rel="stylesheet" href="styles/modules/nav.css">
     <link rel="stylesheet" href="styles/modules/dot-nav.css">
     <link rel="stylesheet" href="styles/modules/form.css">
     <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
-    <link rel="stylesheet" href="animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     
 
 
@@ -36,12 +37,11 @@
 <body>
     <!-- nav tags at the bottom -->
     <div class="navbar">
-                <a href="./"><i class="fa fa-home" aria-hidden="true"></i></a>
-                <!-- need submenus -->
-                <a href="./forecast"><i class="fa fa-snowflake-o" aria-hidden="true"></i></a>
-                <a href="./about"><i class="fa fa-info" aria-hidden="true"></i></a>
-                <a href="./feedback"><i class="fa fa-comments" aria-hidden="true"></i></a>
-            </div>
+        <a href="./"><i class="fa fa-home" aria-hidden="true"></i></a>
+        <a href="./forecast"><i class="fa fa-snowflake-o" aria-hidden="true"></i></a>
+        <a href="./about"><i class="fa fa-info" aria-hidden="true"></i></a>
+        <a href="./feedback"><i class="fa fa-comments" aria-hidden="true"></i></a>
+    </div>
     <section id="home-page" class="animated fadeInDown page">
         <header>
             <img id="page-logo" src="images/logo.jpg" alt="Team Avalanche">
@@ -49,6 +49,7 @@
         <div class="home-container">
             <h2>ABOUT THIS APP:</h2>
             <p>NWAC Avalanche Forecast app...</p>
+            <a href="/forecast"></a><button>Get Started</button></a>
         </div>
         <div class="home-container">
             <h2>REVIEWS:</h2>
@@ -66,15 +67,15 @@
              <div class="sidebar">
               <nav>
                  <ul>
-                     <li><a href="#" class="dot"><span>Top</span></a></li>
+                     <li><a href="#top" class="dot"><span>Top</span></a></li>
                      <li><a href="#forecast-info" class="dot"><span>Info</span></a></li>
-                     <li><a href="#services" class="dot"><span>Problems</span></a></li>
+                     <!-- <li><a href="#problems" class="dot"><span>Problems</span></a></li> -->
                   </ul>
               </nav>
             </div>
         </div>  
                 <!-- nav conatainer -->
-            <header>
+            <header id="top">
                 <img id="page-logo" src="images/logo.jpg" alt="Team Avalanche">
             </header>
         <h1>Select Your Location:</h1>    
@@ -237,16 +238,16 @@
     </section>
 </section>
 
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
-<script src="models/feedback.js"></script>
-<script src="models/location.js"></script>
-<script src="views/feedback-view.js"></script>
-<script src="views/home-view.js"></script>
-<script src="views/about-view.js"></script>
-<script src="view/error-view.js"></script>
-<script src="controllers/routes.js"></script>
-<script src="views/dot-nav.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+    <script src="views/home-view.js"></script>
+    <script src="models/feedback.js"></script>
+    <script src="models/location.js"></script>
+    <script src="views/feedback-view.js"></script>
+    <script src="views/about-view.js"></script>
+    <script src="views/error-view.js"></script>
+    <script src="controllers/routes.js"></script>
+    <script src="views/dot-nav.js"></script>
 
   
 </body>
