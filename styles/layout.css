@@ -28,7 +28,7 @@ h2, h3 {
     margin: 0 auto;
     background: none;
     width: 15%;
-}
+
 /* Form CSS */
 #name, #email {
     background-color: lightgray;
@@ -56,4 +56,9 @@ h2, h3 {
 }
 #random-review {
     text-align: center;
+
+
+#forecast-page {
+    padding-bottom: 10vh;
+    margin-bottom: 10vh;
 }
