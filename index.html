@@ -12,11 +12,12 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules/modules.css">
+    <link rel="stylesheet" href="styles/modules/danger-levels.css">
     <link rel="stylesheet" href="styles/modules/nav.css">
     <link rel="stylesheet" href="styles/modules/dot-nav.css">
     <link rel="stylesheet" href="styles/modules/form.css">
     <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
-    <link rel="stylesheet" href="animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     
 
 
@@ -36,12 +37,11 @@
 <body>
     <!-- nav tags at the bottom -->
     <div class="navbar">
-                <a href="./"><i class="fa fa-home" aria-hidden="true"></i></a>
-                <!-- need submenus -->
-                <a href="./forecast"><i class="fa fa-snowflake-o" aria-hidden="true"></i></a>
-                <a href="./about"><i class="fa fa-info" aria-hidden="true"></i></a>
-                <a href="./feedback"><i class="fa fa-comments" aria-hidden="true"></i></a>
-            </div>
+        <a href="./"><i class="fa fa-home" aria-hidden="true"></i></a>
+        <a href="./forecast"><i class="fa fa-snowflake-o" aria-hidden="true"></i></a>
+        <a href="./about"><i class="fa fa-info" aria-hidden="true"></i></a>
+        <a href="./feedback"><i class="fa fa-comments" aria-hidden="true"></i></a>
+    </div>
     <section id="home-page" class="animated fadeInDown page">
         <header>
             <img id="page-logo" src="images/logo.jpg" alt="Team Avalanche">
@@ -49,6 +49,7 @@
         <div class="home-container">
             <h2>ABOUT THIS APP:</h2>
             <p>NWAC Avalanche Forecast app...</p>
+            <a href="./forecast"><button>Get Started</button></a>
         </div>
         <div class="home-container">
             <h2>REVIEWS:</h2>
@@ -66,15 +67,15 @@
              <div class="sidebar">
               <nav>
                  <ul>
-                     <li><a href="#" class="dot"><span>Top</span></a></li>
+                     <li><a href="#top" class="dot"><span>Top</span></a></li>
                      <li><a href="#forecast-info" class="dot"><span>Info</span></a></li>
-                     <li><a href="#services" class="dot"><span>Problems</span></a></li>
+                     <!-- <li><a href="#problems" class="dot"><span>Problems</span></a></li> -->
                   </ul>
               </nav>
             </div>
         </div>  
                 <!-- nav conatainer -->
-            <header>
+            <header id="top">
                 <img id="page-logo" src="images/logo.jpg" alt="Team Avalanche">
             </header>
         <h1>Select Your Location:</h1>    
@@ -171,82 +172,84 @@
 </section>
 
 <section id="about-page" class="page">
-    <h1>THE TEAM:</h1>
+    <header>
+        <img id="page-logo" src="images/logo.jpg" alt="Team Avalanche">
+    </header>
+    <h2>THE TEAM:</h2>
     <p>We all came together to work on this application based on Alicia and Amber's idea and desire to display accurate data from the Northwest Avalanche Center, also known as "NWAC". We are using the NWAC API in our application to give users an easy to read, abridged summary of avalanche conditions at the most popular mountain areas around the Seattle area. We really enjoyed working together to make this application possible, and hope that it will be used to keep skiers/hikers safe when you travel into the mountains for some snowy fun.</p>
-    <img src="images/arthur.jpg">
-    <section id="about-arthur">
-            <h2>Arthur:</h2>
-            <h3>Random Things</h3>
+    
+    <section id="about-arthur" class="member-info">
+            <img src="images/arthur.jpg" class="member-pic">
+            <h3>Arthur</h3>
+            <div class="social">
+                <a href="https://www.facebook.com/arthur.allen.18"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="https://github.com/ErmineNotyours"><i class="fa fa-github" aria-hidden="true"></i></a>
+            </div>
+            <h4>Random Things</h4>
             <ul>
                 <li>Likes to research drive-in movie theaters.</li>
                 <li>Looking for the perfect fun coding project.</li>
                 <li>Walking.</li>
             </ul>
-            <h3>Links</h3>
-            <ul class="social">
-                    <li><a href="https://www.facebook.com/arthur.allen.18" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-                    <li><a href="https://github.com/ErmineNotyours" class="icon fa-github"><span class="label">Github</span></a></li>
-            </ul>
     </section>
-    <section id="about-amber">
-            <img src="images/amber.png">
-            <h2>Amber:</h2>
-            <h3>Random Things</h3>
+    <section id="about-amber" class="member-info">
+            <img src="images/amber.png" class="member-pic">
+            <h3>Amber:</h3>
+            <div class="social">
+                    <a href="https://amberkimdesign.com/"><i class="fa fa-info" aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com/amgrkim"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="https://github.com/amgranad"><i class="fa fa-github" aria-hidden="true"></i></a>
+                    <a href="https://linkedin.com/in/ambergkim"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            </div>
+            <h4>Random Things</h4>
             <ul>
-                <li>I go hiking and rock climbing with my family.</li>
-                <li>I love fantasy books.</li>
-                <li>I'm a chocolate ice cream kind of gal!</li>
-            </ul>
-            <h3>Links</h3>
-            <ul class="social">
-                    <li><a href="https://www.facebook.com/amgrkim" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-                    <li><a href="https://github.com/amgranad" class="icon fa-github"><span class="label">Github</span></a></li>
-                    <li><a href="https://linkedin.com/in/ambergkim" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                <li>I love working with others who strive to make the lives of people around them better.</li>
+                <li>Hobbies: Reading books, rock climbing and hiking.</li>
+                <li>Favorite Dessert: I'm a chocolate ice cream kind of gal!</li>
             </ul>
     </section>
-    <img src="images/brandon.jpg">
-    <section id="about-brandon">
-            <h2>Brandon:</h2>
-            <h3>Random Things</h3>
-            <ul>
-                <li>I live on a 65' retired salmon fishing boat on South Lake Union.</li>
-                <li>Circumnavigated the the world in 19 days while in the US Navy.</li>
-                <li>I enjoy camping and hiking with my family.</li>
-            </ul>
-            <h3>Links</h3>
-            <ul class="social">
-                    <li><a href="https://www.facebook.com/brandon.buchholz" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-                    <li><a href="https://github.com/bjbuchholz" class="icon fa-github"><span class="label">Github</span></a></li>
-                    <li><a href="https://www.linkedin.com/in/brandon-buchholz/" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+    <section id="about-brandon" class="member-info">
+        <img src="images/brandon.jpg" class="member-pic">
+        <h3>Brandon:</h3>
+        <div class="social">
+                <a href="https://www.facebook.com/brandon.buchholz"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="https://github.com/bjbuchholz"><i class="fa fa-github" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/in/brandon-buchholz/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        </div>
+        <h4>Random Things</h4>
+        <ul>
+            <li>I live on a 65' retired salmon fishing boat on South Lake Union.</li>
+            <li>Circumnavigated the the world in 19 days while in the US Navy.</li>
+            <li>I enjoy camping and hiking with my family.</li>
             </ul>
     </section>
-    <img src="images/aliciaProfile.jpg">
-    <section id="about-alicia">
-        <h2>Alicia:</h2>
-        <h3>Random Things</h3>
+    <section id="about-alicia"  class="member-info">
+        <img src=src="images/aliciaProfile.jpg" class="member-pic">
+        <h3>Alicia:</h3>
+        <div class="social">
+                <a href="http://www.alicialycan.com"><i class="fa fa-laptop" aria-hidden="true"></i></a>
+                <a href="https://github.com/alicialycan"><i class="fa fa-github" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/in/alicialycan/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        </div>
+        <h4>Random Things</h4>
         <ul>
             <li>I love whitewater kayaking!</li>
             <li>I have a dream to work as a software engineer while sailing to Chile.</li>
             <li>My Why: The challenge is almost always worth it. Don't ever let the fear of not succeeding stop you from growing, evolving, and progressing. #shegoes</li>
         </ul>
-        <h3>Links</h3>
-        <ul class="social"></ul>
-            <li><a href="http://www.alicialycan.com"></a> <i class="fa fa-laptop" aria-hidden="true"></i></li>
-            <li><a href="https://github.com/alicialycan" class="icon fa-github"><span class="label">Github</span></a></li>
-            <li><a href="https://www.linkedin.com/in/alicialycan/" class="icon fa-Linkedin"><span class="icon fa-Linkedin"></span></a></li>
     </section>
 </section>
 
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
-<script src="models/feedback.js"></script>
-<script src="models/location.js"></script>
-<script src="views/feedback-view.js"></script>
-<script src="views/home-view.js"></script>
-<script src="views/about-view.js"></script>
-<script src="view/error-view.js"></script>
-<script src="controllers/routes.js"></script>
-<script src="views/dot-nav.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+    <script src="views/home-view.js"></script>
+    <script src="models/feedback.js"></script>
+    <script src="models/location.js"></script>
+    <script src="views/feedback-view.js"></script>
+    <script src="views/about-view.js"></script>
+    <script src="views/error-view.js"></script>
+    <script src="controllers/routes.js"></script>
+    <script src="views/dot-nav.js"></script>
 
   
 </body>

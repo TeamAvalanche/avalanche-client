@@ -11,42 +11,29 @@
     font-size: 25px;
 }
 
-/* Avalanche Danger Levels */
-.High, .Considerable, .Moderate, .Low {
-    flex-grow: 1;
-    align-content: center;
+
+#random-review {
+    text-align: center;
+  }
+
+.member-pic {
+    width: 200px;
+    border-radius: 50%;
 }
 
-.High {
-    color: red;
+.member-info {
+    margin-top: 15%;
 }
 
-.Considerable {
-    color: orange;
-}
-
-.Moderate  {
-    color: yellow;
-    text-shadow: 1px #2a405a;
-}
-
-.Low {
-    color: green;
-}
-
-.triangle-container {
+.social {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
 }
 
-.triangle-holder {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.social a {
+    margin: 0 1em;
 }
 
-.triangles {
-    width: 30%;
-    height: 30%;
+.social a i {
+    font-size: 20px;
 }
-
