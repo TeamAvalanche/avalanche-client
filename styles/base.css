@@ -7,6 +7,23 @@ h1 {
     font-size: 16px;
 }
 
+h2, h3 {
+    margin-top: 30px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-top: 1px solid #2a405a;
+    border-bottom: 1px solid #2a405a;
+    padding: 15px 0px 10px 0px;
+    background-color: #f3f1f0;
+}
+
+h2,
+p {
+    display: block;
+    padding: 5% 10%;
+}
+
 #name, #email {
     background-color: lightgray;
     width: 35%;
@@ -32,4 +49,13 @@ h1 {
 }
 #random-review {
     text-align: center;
+}
+
+button {
+    font-family: 'Cabin', sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    background-color: #7191c1;
+    padding: 0.5em 1em;
+    border: solid 2px #2a405a;
 }

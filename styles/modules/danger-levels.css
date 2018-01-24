@@ -1,0 +1,38 @@
+/* Avalanche Danger Levels */
+.High, .Considerable, .Moderate, .Low {
+  flex-grow: 1;
+  align-content: center;
+}
+
+.High {
+  color: red;
+}
+
+.Considerable {
+  color: orange;
+}
+
+.Moderate  {
+  color: yellow;
+  text-shadow: 1px #2a405a;
+}
+
+.Low {
+  color: green;
+}
+
+.triangle-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.triangle-holder {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.triangles {
+  width: 30%;
+  height: 30%;
+}
