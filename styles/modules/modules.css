@@ -1,3 +1,16 @@
+#page-logo {
+    display: block;
+    margin-top: 10%;
+    margin: 0 auto;
+    background: none;
+    width: 15%;
+    margin-top: 3vh;
+}
+
+.fa {
+    font-size: 25px;
+}
+
 /* Avalanche Danger Levels */
 .High, .Considerable, .Moderate, .Low {
     flex-grow: 1;
@@ -36,3 +49,4 @@
     width: 30%;
     height: 30%;
 }
+

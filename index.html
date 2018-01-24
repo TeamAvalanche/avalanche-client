@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="styles/modules/modules.css">
     <link rel="stylesheet" href="styles/modules/nav.css">
     <link rel="stylesheet" href="styles/modules/dot-nav.css">
+    <link rel="stylesheet" href="styles/modules/form.css">
     <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
     <link rel="stylesheet" href="animate.min.css">
     
@@ -33,6 +34,14 @@
 </head>
 
 <body>
+    <!-- nav tags at the bottom -->
+    <div class="navbar">
+                <a href="./"><i class="fa fa-home" aria-hidden="true"></i></a>
+                <!-- need submenus -->
+                <a href="./forecast"><i class="fa fa-snowflake-o" aria-hidden="true"></i></a>
+                <a href="./about"><i class="fa fa-info" aria-hidden="true"></i></a>
+                <a href="./feedback"><i class="fa fa-comments" aria-hidden="true"></i></a>
+            </div>
     <section id="home-page" class="animated fadeInDown page">
         <header>
             <img id="page-logo" src="images/logo.jpg" alt="Team Avalanche">
@@ -116,15 +125,6 @@
         </form>
     </section>
     <section class="error-view page"></section>
-
-    <!-- nav tags at the bottom -->
-    <div class="navbar">
-        <a href="./">Home</a>
-        <!-- need submenus -->
-        <a href="./forecast">Forecast</a>
-        <a href="./about">About</a>
-        <a href="./feedback">Feedback</a>
-    </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
