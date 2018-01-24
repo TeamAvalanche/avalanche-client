@@ -3,12 +3,12 @@
 var app = app || {};
 
 (module => {
-    let aboutCreateView = {};
+  let aboutCreateView = {};
 
-    aboutCreateView.init = () => {
-        $('#about-page').show();
-    };
+  aboutCreateView.init = () => {
+    $('#about-page').show();
+  };
 
-    module.aboutCreateView = aboutCreateView;
+  module.aboutCreateView = aboutCreateView;
 
 })(app);
