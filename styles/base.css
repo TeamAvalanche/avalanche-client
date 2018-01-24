@@ -32,14 +32,14 @@ p {
 #comments {
     background-color: lightgray;
     width: 50%;
-    margin-left: 24%;
+    margin: 0 auto;;
     margin-top: -8%;
 }
 
 #location {
     background-color: lightgray;
     width: 50%;
-    margin-left: 24%;
+    margin: 0 auto;;
 }
 
 #feedback-form, #submit  {
