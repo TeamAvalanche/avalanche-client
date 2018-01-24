@@ -41,6 +41,7 @@ h3 {
     background-color: lightgray;
     width: 50%;
     margin: 0 auto;
+}
 
 h4 {
     font-size: 18px;
@@ -52,7 +53,6 @@ h4 {
 p {
     line-height: 1.5;
     padding: 5% 10%;
-
 }
 
 p, li {
