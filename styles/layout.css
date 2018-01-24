@@ -28,6 +28,7 @@ h2, h3 {
     margin: 0 auto;
     background: none;
     width: 15%;
+}
 
 /* Form CSS */
 #name, #email {
@@ -35,6 +36,7 @@ h2, h3 {
     width: 35%;
     margin-top: 2%;
 }
+
 #comments {
     background-color: lightgray;
     width: 50%;
@@ -52,11 +54,11 @@ h2, h3 {
 #feedback-form, #submit  {
     width: 100%;
     margin: auto;
-
 }
+
 #random-review {
     text-align: center;
-
+}
 
 #forecast-page {
     padding-bottom: 10vh;

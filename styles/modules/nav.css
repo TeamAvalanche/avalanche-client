@@ -4,7 +4,8 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-    padding-bottom: .5em;
+    display: flex;
+    justify-content: center;
 }
 
 .navbar a {
@@ -14,18 +15,23 @@
     text-align: center;
     padding: 20px 16px;
     text-decoration: none;
-    /* border: 3px solid #f3f1f0; */
     font-size: 18px;
+    border: solid 1px #f3f1f0;
+    margin: 0.25em;
+    overflow: hidden;
+    width: 20vh;
 }
 
 .navbar a:hover {
     background-color: #f3f1f0;
     color: #0b1828;
+    border: solid 1px #f3f1f0;
 }
 
 .navbar a.active {
     background-color: #2a405a;
     color: #f3f1f0;
+    border: solid 1px #f3f1f0;
 }
 
 .navbar .icon {
