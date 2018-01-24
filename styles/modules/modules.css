@@ -15,3 +15,25 @@
 #random-review {
     text-align: center;
   }
+
+.member-pic {
+    width: 200px;
+    border-radius: 50%;
+}
+
+.member-info {
+    margin-top: 15%;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+}
+
+.social a {
+    margin: 0 1em;
+}
+
+.social a i {
+    font-size: 20px;
+}

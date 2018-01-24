@@ -7,9 +7,8 @@ h1 {
     font-size: 16px;
 }
 
-h2, h3 {
+h2 {
     margin-top: 30px;
-    font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 1px;
     border-top: 1px solid #2a405a;
@@ -18,35 +17,40 @@ h2, h3 {
     background-color: #f3f1f0;
 }
 
-h2,
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 28px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
 p {
-    display: block;
+    line-height: 1.5;
     padding: 5% 10%;
 }
 
-#name, #email {
-    background-color: lightgray;
-    width: 35%;
-    margin-top: 2%;
-}
-#comments {
-    background-color: lightgray;
-    width: 50%;
-    margin-left: 24%;
-    margin-top: -8%;
+p, li {
+    text-align: left;
+    font-size: 16px;
 }
 
-#location {
-    background-color: lightgray;
-    width: 50%;
-    margin-left: 24%;
+li {
+    list-style-position: inside;
 }
 
-#feedback-form, #submit  {
-    width: 100%;
-    margin: auto;
-
-}
 #random-review {
     text-align: center;
 }
@@ -58,4 +62,11 @@ button {
     background-color: #7191c1;
     padding: 0.5em 1em;
     border: solid 2px #2a405a;
+}
+
+select {
+    border: solid 1px #2a405a;
+    padding: 0.25em 1em;
+    font-size: 20px;
+    width: 90%;
 }
