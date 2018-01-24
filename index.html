@@ -88,14 +88,14 @@
                 <img id="page-logo" src="images/logo.jpg" alt="Team Avalanche">
             </header>
         <form id="feedback-form" action="" method="get" class="animated fadeInDown">
-            <p>Name:
-                <input type="text" id="name"name="name" />
+            <p>Name:<br> 
+                <input type="text" id="name"name="name"/>
             </p>
-            <p>e-mail:
-                <input type="text" id="email" name="email" />
+            <p>E-mail:<br>
+                <input type="text" id="email" name="email"/>
             </p>
             <p>Location:</p>
-            <select name="location">
+            <select name="location" id="location">
                 <option value="cascade-west-north-baker">Mt. Baker</option>
                 <option value="cascade-west-stevens-pass">Stevens Pass</option>
                 <option value="cascade-west-snoqualmie-pass">Snoqualmie Pass</option>
@@ -104,14 +104,14 @@
             <p>Comments:</p>
             <textarea name="comments" id="comments"></textarea>
             <p>Rating:
-                <br />
+                <br><br>
                 <input type="radio" name="rating" value="1" checked="checked" /> 1
                 <input type="radio" name="rating" value="2" /> 2
                 <input type="radio" name="rating" value="3" /> 3
                 <input type="radio" name="rating" value="4" /> 4
                 <input type="radio" name="rating" value="5" /> 5
             </p>
-            <input type="submit" name="submit" />
+            <input type="submit" name="submit" id="submit"/>
 
         </form>
     </section>
@@ -164,7 +164,7 @@
             <input type="radio" id="r5" name="rating" value="5"/> 5
         </div>
     </p>
-    <input type="submit" name="submit"/>
+    <input type="submit" name="submit" id="submit"/>
 
     </p>
     </form>
