@@ -1,7 +1,8 @@
 /* Avalanche Danger Levels */
-.High, .Considerable, .Moderate, .Low {
+.High, .Considerable, .Moderate, .Low, .undefined {
   flex-grow: 1;
   align-content: center;
+  font-size: 2em;
 }
 
 .High {
@@ -24,6 +25,7 @@
 .triangle-container {
   display: flex;
   flex-direction: column;
+  padding: 0 10%;
 }
 
 .triangle-holder {
