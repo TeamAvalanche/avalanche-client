@@ -15,7 +15,6 @@ var app = app || {};
 
   homeCreateView.displayOneReview = () => {
     app.Feedback.fetchOne(1, function(data) {
-      console.log('home create view fetch one data ', data);
       $('#random-review').empty();
       for (let i = 0; i < data.rating; i++) {
         $('#random-review').append(`

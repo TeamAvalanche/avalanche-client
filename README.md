@@ -19,17 +19,23 @@
 
 
 ## <a name="technologies"></a>Technologies
-* **Front-end**: [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript),  [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5), [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3), [Page.js](https://visionmedia.github.io/page.js/),
+* **Front-end**: [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript),  [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5), [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3), [Page.js](https://visionmedia.github.io/page.js/), [Handlebars](http://handlebarsjs.com/)
 
-* **Back-end**: [Node.js](https://nodejs.org/en/),  [Express](https://www.npmjs.com/package/express), [Super Agent](https://www.npmjs.com/package/superagent), [Heroku](https://heroku.com/), [PostgreSQL](https://www.postgresql.org/), [Body Parser](https://www.npmjs.com/package/body-parser), [Cors](https://www.npmjs.com/package/cors)
+* **Back-end**: [Node.js](https://nodejs.org/en/),  [Express](https://www.npmjs.com/package/express), [Super Agent](https://www.npmjs.com/package/superagent), [Heroku](https://heroku.com/), [PostgreSQL](https://www.postgresql.org/), [Body Parser](https://www.npmjs.com/package/body-parser), [Cors](https://www.npmjs.com/package/cors), [Request](https://www.npmjs.com/package/request), [Cheerio](https://www.npmjs.com/package/cheerio)
 
 * **Other**: MVC, RESTful API
 
 ## <a name="how-to-use"></a>How to Use This Team Avalanche App
 #### <a name="homepage"></a>Homepage
-![gif of homepage](# "Step 1a")
+![gif of app](# "Step 1a")
+##### Getting your forecast information
+1. Press the "Get Started" button above or select the Snowflake from the menu at the bottom.
+2. Next, you will select the region you want to display. Once the location is chosen you will see current weather/avalanche information directly from "NWAC" It's that easy!!!!
 
-Welcome...
+##### Leaving your feedback
+3. To leave your review or user feedback, click on the Comments Icon on the bottom right.
+4. Fill in your information on the form (please don't leave any sensitive information!). Your review will populate with other reviews randomly on the home page.
+5. Click "Submit" and you will be taken to a thank you page.
 
 # <a name="details"></a> More Project Details
 
@@ -48,6 +54,6 @@ The Northwest Avalanch Center provides up-to-date and accurate information for p
 # Special Thanks to
 * [Northwest Avalanch Center](https://www.nwac.us/) for letting our team use their API!
 * [Nicolas Gallagher](https://github.com/necolas) for normalize.css
-* [Font Awesome by Dave Gandy](http://fontawesome.io)
-* [Dot Navigation by Chris](https://codepen.io/zuhloobie/pen/RaLJOK)
-* [Animate.css](https://daneden.github.io/animate.css/)
+* [Font Awesome by Dave Gandy](http://fontawesome.io) for Font Awesome icons.
+* [Dot Navigation by Chris](https://codepen.io/zuhloobie/pen/RaLJOK) See the side navigation on our Forecast page.
+* [Animate.css](https://daneden.github.io/animate.css/) Page animations.
