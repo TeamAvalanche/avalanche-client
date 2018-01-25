@@ -54,6 +54,8 @@ li {
 
 #random-review {
     text-align: center;
+    width: 100%;
+    margin: 0 auto;
 }
 
 button {

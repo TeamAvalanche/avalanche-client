@@ -1,14 +1,14 @@
 /* Form CSS */
 #name, #email {
   background-color: lightgray;
-  margin-top: 2%;
+  margin-top: 7%;
 }
 
 #comments {
   background-color: lightgray;
   width: 90%;
   margin: 0 auto;
-  margin-top: -8%;
+  margin-top: -3%
 }
 
 #location {
