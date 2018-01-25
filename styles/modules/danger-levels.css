@@ -38,3 +38,31 @@
   width: 30%;
   height: 30%;
 }
+
+@media only screen and (min-width: 1000px){
+  #forecast-info p {
+    margin: 0 auto !important;
+  }
+  .triangle-container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .triangle-holder {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .triangle-holder p {
+    text-align: center;
+    flex-grow: 1;
+    width: 150px;
+    align-items: center;
+  }
+  .triangles {
+    width: 200px;
+    height: 200px;
+    align-items: center;
+  }
+  .High, .Considerable, .Moderate, .Low, .undefined {
+    font-size: 1.5em;
+  }
+}

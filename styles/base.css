@@ -5,16 +5,15 @@
 
 h1 {
     font-size: 16px;
+    margin-top: 5vh;
 }
 
 h2 {
     margin-top: 30px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    border-top: 1px solid #2a405a;
     border-bottom: 1px solid #2a405a;
     padding: 15px 0px 10px 0px;
-    background-color: #f3f1f0;
 }
 
 
@@ -57,6 +56,10 @@ li {
     margin: 0 auto;
 }
 
+label, button {
+    display: block;
+}
+
 button {
     font-family: 'Cabin', sans-serif;
     text-transform: uppercase;
@@ -64,11 +67,45 @@ button {
     background-color: #7191c1;
     padding: 0.5em 1em;
     border: solid 2px #2a405a;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-select, input[type="text"] {
+select, input[type="text"], textarea {
     border: solid 1px #2a405a;
     padding: 0.25em 1em;
     font-size: 20px;
-    width: 90%;
+    width: 80%;
+    margin-bottom: 5%;
+}
+
+input[type="radio"] {
+    margin-bottom: 10%;
+}
+
+form {
+    padding-top: 5vh;
+}
+
+label {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+@media only screen and (min-width: 1000px) {
+    h2, p, select {
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    select, input[type="text"], textarea {
+        width: 500px;
+    }
+    input[type="radio"] {
+        margin-bottom: 0;
+    }
+    button {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
