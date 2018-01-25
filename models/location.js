@@ -19,8 +19,7 @@ var app = app || {};
   };
 
   Location.fetchScrape = (region, callback) => {
-    console.log(`http://localhost:3000/scrape/${region}`);
-    return $.getJSON('http://localhost:3000/scrape/' + region)
+    return $.getJSON(`${_API_URL_}/scrape/` + region)
       .then((temps) => callback(temps))
       .catch(errorCallback);
   };
