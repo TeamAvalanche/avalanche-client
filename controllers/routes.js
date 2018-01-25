@@ -3,7 +3,7 @@
 var app = app || {};
 
 if (window.location.pathname !== '/') {
-  page.base('/gh-plus-page-test') // place our web address here once we deploy to GH pages
+  page.base('/gh-plus-page-test'); // place our web address here once we deploy to GH pages
 }
 
 page('/*', (ctx, next) => {
@@ -16,8 +16,8 @@ page('/', () => {
 });
 
 page('/forecast', () => {
-    app.forecastCreateView.init();
-  });
+  app.forecastCreateView.init();
+});
 
 page('/feedback', () => {
   $('.page').hide();
@@ -25,8 +25,8 @@ page('/feedback', () => {
 });
 
 page('/about', () => {
-    $('.page').hide();
-    app.aboutCreateView.init();
+  $('.page').hide();
+  app.aboutCreateView.init();
 });
 
 page('/thanks', () => {
