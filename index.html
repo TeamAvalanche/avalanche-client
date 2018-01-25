@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/icons.css">
     <link rel="stylesheet" href="styles/modules/modules.css">
     <link rel="stylesheet" href="styles/modules/danger-levels.css">
     <link rel="stylesheet" href="styles/modules/nav.css">
@@ -69,12 +70,10 @@
                  <ul>
                      <li><a href="#top" class="dot"><span>Top</span></a></li>
                      <li><a href="#forecast-info" class="dot"><span>Info</span></a></li>
-                     <!-- <li><a href="#problems" class="dot"><span>Problems</span></a></li> -->
                   </ul>
               </nav>
             </div>
         </div>  
-                <!-- nav conatainer -->
             <header id="top">
                 <img id="page-logo" src="images/logo.jpg" alt="Team Avalanche">
             </header>
@@ -84,7 +83,7 @@
             <option value="cascade-west-north-baker">Mt. Baker</option>
             <option value="cascade-west-stevens-pass">Stevens Pass</option>
             <option value="cascade-west-snoqualmie-pass">Snoqualmie Pass</option>
-            <option value="cascade-west-central">Chrystal/Mt. Rainier</option>
+            <option value="cascade-west-central">Crystal/Mt. Rainier</option>
         </select>
         </div>
         <div id="forecast-info"> 
@@ -98,12 +97,13 @@
             </header>
             <h2>Like Our App? Tell Us What You Think?</h2>
         <form id="feedback-form" action="" method="get" class="animated fadeInDown">
-            <label for="name">Name:<lable></lable><br/> 
+            <label for="name">Name:</label>
             <input type="text" id="name"name="name"/>
-            <label for="email">E-mail:<label></label><br />
-            <input type="text" id="email" name="email"/>
+            <label for="email">E-mail:<label></label>
+            <input type="text" id="email" name="email"/></label>
             <label>Location:</label>
             <select name="location" id="location">
+                <option value="" disabled selected>--Select--</option>
                 <option value="cascade-west-north-baker">Mt. Baker</option>
                 <option value="cascade-west-stevens-pass">Stevens Pass</option>
                 <option value="cascade-west-snoqualmie-pass">Snoqualmie Pass</option>
@@ -111,7 +111,7 @@
             </select>
             <label for="comments">Comments:</label>
             <textarea name="comments" id="comments"></textarea>
-            <label>Rating:</label><br>
+            <label>Rating:</label>
                 <input type="radio" name="rating" value="1" checked="checked" /> 1
                 <input type="radio" name="rating" value="2" /> 2
                 <input type="radio" name="rating" value="3" /> 3
@@ -180,7 +180,7 @@
     </header>
     <h2>THE TEAM:</h2>
     <p>We all came together to work on this application based on Alicia and Amber's idea and desire to display accurate data from the Northwest Avalanche Center, also known as "NWAC". We are using the NWAC API in our application to give users an easy to read, abridged summary of avalanche conditions at the most popular mountain areas around the Seattle area. We really enjoyed working together to make this application possible, and hope that it will be used to keep skiers/hikers safe when you travel into the mountains for some snowy fun.</p>
-    
+    <div id="members">
     <section id="about-arthur" class="member-info">
             <img src="images/arthur.jpg" class="member-pic">
             <h3>Arthur</h3>
@@ -241,6 +241,7 @@
             <li>My Why: The challenge is almost always worth it. Don't ever let the fear of not succeeding stop you from growing, evolving, and progressing. #shegoes</li>
         </ul>
     </section>
+    </div><!-- members -->
 </section>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

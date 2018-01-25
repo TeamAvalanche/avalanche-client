@@ -1,24 +1,28 @@
 /* Form CSS */
 #name, #email {
   background-color: lightgray;
-  margin-top: 2%;
 }
 
 #comments {
   background-color: lightgray;
-  width: 90%;
 }
 
 #location {
   border: 1px solid black;
+  border-radius: 0;
   background-color: lightgray;
 }   
 
 #feedback-form, #submit  {
-  width: 90%;
   margin: auto;
 }
 
 #random-review {
   text-align: center;
+}
+
+@media only screen and (min-width: 1000px) {
+  #submit {
+    margin-top: 5%;
+  }
 }

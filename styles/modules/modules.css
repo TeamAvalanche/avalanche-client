@@ -11,11 +11,6 @@
     font-size: 25px;
 }
 
-
-#random-review {
-    text-align: center;
-  }
-
 .member-pic {
     width: 200px;
     border-radius: 50%;
@@ -36,4 +31,25 @@
 
 .social a i {
     font-size: 20px;
+}
+
+/** RANDOM REVIEW **/
+#random-review {
+    text-align: center;
+}
+#random-review p {
+    font-style: italic;
+    text-align: center;
+    font-size: 24px;
+    padding: 10px;
+}
+#random-review h4 {
+    font-size: 20px;
+    margin: 0;
+}
+
+@media only screen and (min-width: 1000px) {
+    #page-logo {
+        width: 75px;
+    }
 }
