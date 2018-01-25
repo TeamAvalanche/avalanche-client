@@ -14,11 +14,10 @@ var app = app || {};
     let summary = locationObject.objects[0].bottom_line_summary;
     let aboveDangerLevel = locationObject.objects[0].day1_danger_elev_high;
     let atDangerLevel = locationObject.objects[0].day1_danger_elev_middle;
-    let belowDangerLevel = locationObject.objects[0].day1_danger_elev_low2;
     let problemType = locationObject.objects[0].problems[0].problem_type.definition;
-
     let splits = problemType.split('</p>', 1);
-
+    let belowDangerLevel = locationObject.objects[0].day1_danger_elev_low;
+    let problems = locationObject.objects[0].problems[0].likelihood;
     $('#forecast-info').append(`
     <h2>Location</h2>
     <p>${location}</p>
@@ -41,15 +40,7 @@ var app = app || {};
     <p>${splits}
     `);
   };
-
-  //   $('#banner-image').on('change', function(e) {
-  //     e.preventDefault();
-  //     let bannerImage = $('#banner-image')
-  //     if val = 'cascade-west-north-baker'
-  //         bannerImage = 'images/Mt.Baker.jpg'
-  //     else if val =
-  //   });
-
+  
   let fetchEverything = (region) => {
     app.Location.fetchRegion(region, (locationObject) => {
       //region fetched, now fetch scrape data

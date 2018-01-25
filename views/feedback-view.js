@@ -23,6 +23,8 @@ var app = app || {};
       .then( () => {
         clearFields();
       });
+
+    app.thanksView.init();
   });
   module.feedbackCreateView = feedbackCreateView;
 

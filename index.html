@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/icons.css">
     <link rel="stylesheet" href="styles/modules/modules.css">
     <link rel="stylesheet" href="styles/modules/danger-levels.css">
     <link rel="stylesheet" href="styles/modules/nav.css">
@@ -48,7 +49,7 @@
         </header>
         <div class="home-container">
             <h2>ABOUT THIS APP:</h2>
-            <p>NWAC Avalanche Forecast app...</p>
+            <p>This application displays accurate weather and avalanche data based on the location you choose. We get our accurate data from the North West Avalanche Center also know as "NWAC".</p>
             <a href="./forecast"><button>Get Started</button></a>
         </div>
         <div class="home-container">
@@ -57,7 +58,7 @@
         </div>
         <div class="home-container">
             <h2>HOW IT WORKS:</h2>
-            <p>Step by step instructions...</p>
+            <p>Press the "Get Started" button above or select the Snowflake from the menu at the bottom. Next, you will select the region you want to display. Once the location is chosen you will see current weather/avalanche information directly from "NWAC" It's that easy!!!!   </p>
         </div>
     </section>
 
@@ -69,12 +70,10 @@
                  <ul>
                      <li><a href="#top" class="dot"><span>Top</span></a></li>
                      <li><a href="#forecast-info" class="dot"><span>Info</span></a></li>
-                     <!-- <li><a href="#problems" class="dot"><span>Problems</span></a></li> -->
                   </ul>
               </nav>
             </div>
         </div>  
-                <!-- nav conatainer -->
             <header id="top">
                 <img id="page-logo" src="images/logo.jpg" alt="Team Avalanche">
             </header>
@@ -84,12 +83,11 @@
             <option value="cascade-west-north-baker">Mt. Baker</option>
             <option value="cascade-west-stevens-pass">Stevens Pass</option>
             <option value="cascade-west-snoqualmie-pass">Snoqualmie Pass</option>
-            <option value="cascade-west-south">Chrystal/Mt. Rainier</option>
+            <option value="cascade-west-central">Crystal/Mt. Rainier</option>
         </select>
         </div>
         <div id="forecast-info"> 
-            <!-- Forecast page will have 3 columns h1: Elevation h2: Today h3: Tomorrow. Triangles and info underneath each header -->
-
+            <p>Select your location from the dropdown above.</p>
         </div>
     </section>
 
@@ -97,33 +95,38 @@
             <header>
                 <img id="page-logo" src="images/logo.jpg" alt="Team Avalanche">
             </header>
+            <h2>Like Our App? Tell Us What You Think?</h2>
         <form id="feedback-form" action="" method="get" class="animated fadeInDown">
-            <p>Name:<br> 
-                <input type="text" id="name"name="name"/>
-            </p>
-            <p>E-mail:<br>
-                <input type="text" id="email" name="email"/>
-            </p>
-            <p>Location:</p>
+            <label for="name">Name:</label>
+            <input type="text" id="name"name="name"/>
+            <label for="email">E-mail:<label></label>
+            <input type="text" id="email" name="email"/></label>
+            <label>Location:</label>
             <select name="location" id="location">
+                <option value="" disabled selected>--Select--</option>
                 <option value="cascade-west-north-baker">Mt. Baker</option>
                 <option value="cascade-west-stevens-pass">Stevens Pass</option>
                 <option value="cascade-west-snoqualmie-pass">Snoqualmie Pass</option>
                 <option value="cascade-west-south">Crystal/Mt. Rainier</option>
             </select>
-            <p>Comments:</p>
+            <label for="comments">Comments:</label>
             <textarea name="comments" id="comments"></textarea>
-            <p>Rating:
-                <br><br>
+            <label>Rating:</label>
                 <input type="radio" name="rating" value="1" checked="checked" /> 1
                 <input type="radio" name="rating" value="2" /> 2
                 <input type="radio" name="rating" value="3" /> 3
                 <input type="radio" name="rating" value="4" /> 4
                 <input type="radio" name="rating" value="5" /> 5
-            </p>
-            <input type="submit" name="submit" id="submit"/>
+            <button type="submit" name="submit" id="submit">Submit</button>
 
         </form>
+    </section>
+    <section id="thank-you-page" class="page">
+        <header>
+            <img id="page-logo" src="images/logo.jpg" alt="Team Avalanche">
+        </header>
+        <h1>Thank you for your feedback!</h1>
+        <p>We really appreciate it!</p>
     </section>
     <section class="error-view page"></section>
 
@@ -177,7 +180,7 @@
     </header>
     <h2>THE TEAM:</h2>
     <p>We all came together to work on this application based on Alicia and Amber's idea and desire to display accurate data from the Northwest Avalanche Center, also known as "NWAC". We are using the NWAC API in our application to give users an easy to read, abridged summary of avalanche conditions at the most popular mountain areas around the Seattle area. We really enjoyed working together to make this application possible, and hope that it will be used to keep skiers/hikers safe when you travel into the mountains for some snowy fun.</p>
-    
+    <div id="members">
     <section id="about-arthur" class="member-info">
             <img src="images/arthur.jpg" class="member-pic">
             <h3>Arthur</h3>
@@ -238,6 +241,7 @@
             <li>My Why: The challenge is almost always worth it. Don't ever let the fear of not succeeding stop you from growing, evolving, and progressing. #shegoes</li>
         </ul>
     </section>
+    </div><!-- members -->
 </section>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -247,6 +251,7 @@
     <script src="models/location.js"></script>
     <script src="views/feedback-view.js"></script>
     <script src="views/about-view.js"></script>
+    <script src="views/thanks-view.js"></script>
     <script src="views/error-view.js"></script>
     <script src="controllers/routes.js"></script>
     <script src="views/dot-nav.js"></script>
