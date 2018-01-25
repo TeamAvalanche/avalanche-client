@@ -8,18 +8,29 @@ var app = app || {};
 
   const $view = $('#forecast-page');
 
-  forecastCreateView.displayForecast = (locationObject, temps) => {
+  forecastCreateView.displayForecast = (locationObject, temps, region) => {
     $('#forecast-info').empty();
-    let location = locationObject.objects[0].zones[0].zone_name;
+    let zone;
+    if (region === 'cascade-west-north-baker') {
+      zone = 0;
+    } else if (region === 'cascade-west-stevens-pass') {
+      zone = 2;
+    } else if (region === 'cascade-west-snoqualmie-pass') {
+      zone = 3;
+    } else if (region === 'cascade-west-south') {
+      zone = 1;
+    }
+    let locactionAbbr = locationObject.objects[0].zones[zone].zone_abbrev;
+    let location = locationObject.objects[0].zones[zone].zone_name;
     let summary = locationObject.objects[0].bottom_line_summary;
     let aboveDangerLevel = locationObject.objects[0].day1_danger_elev_high;
     let atDangerLevel = locationObject.objects[0].day1_danger_elev_middle;
     let problemType = locationObject.objects[0].problems[0].problem_type.definition;
     let splits = problemType.split('</p>', 1);
     let belowDangerLevel = locationObject.objects[0].day1_danger_elev_low;
-    let problems = locationObject.objects[0].problems[0].likelihood;
     $('#forecast-info').append(`
-    <h2>Location</h2>
+    <h2>Location:</h2>
+    <p>${locactionAbbr}</p>
     <p>${location}</p>
     <h2>Weather</h2>
     <p>${temps}</p>
@@ -37,16 +48,16 @@ var app = app || {};
         </div>
     </div>
     <h2>Problems</h2>
-    <p>${splits}
+    <p>${splits}</p>
     `);
   };
   
-  let fetchEverything = (region) => {
+  forecastCreateView.fetchEverything = (region) => {
     app.Location.fetchRegion(region, (locationObject) => {
       //region fetched, now fetch scrape data
       app.Location.fetchScrape(region, (temps) => {
         //scrape fetched, now display forecast
-        forecastCreateView.displayForecast(locationObject, temps);
+        forecastCreateView.displayForecast(locationObject, temps, region);
       });
     });
   };
@@ -55,8 +66,7 @@ var app = app || {};
     if (localStorage.getItem('region')) {
       let regionString = localStorage.getItem('region');
       let regionParsed = JSON.parse(regionString);
-      console.log('region parsed local storage ', regionParsed);
-      fetchEverything(regionParsed);
+      forecastCreateView.fetchEverything(regionParsed);
     }
     $view.show();
   };
@@ -64,7 +74,7 @@ var app = app || {};
   $('#forecast-select').on('change', function (e) {
     e.preventDefault();
     let region = $('#forecast-select').val();
-    fetchEverything(region);
+    forecastCreateView.fetchEverything(region);
     let regionString = JSON.stringify(region);
     localStorage.setItem('region', regionString);
   });

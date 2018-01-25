@@ -24,8 +24,6 @@ var app = app || {};
 
   Feedback.fetchIds = (callback) => $.getJSON(_API_URL_ + '/api/v1/feedbackids').then(data => callback(data)).catch(errorCallback);
 
-  // Feedback.ids = () => $.getJSON(_API_URL_ + '/api/v1/feedback/' + id).then(data => console.log('fetch one data ', data)).catch(errorCallback);
-
   Feedback.deleteOne = id => {
     return $.ajax({
       url: _API_URL_ + '/api/v1/feedback/' + id,

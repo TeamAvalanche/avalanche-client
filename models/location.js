@@ -9,6 +9,7 @@ var app = app || {};
   }
 
   const _API_URL_ = 'https://team-avalanche.herokuapp.com';
+  // const _API_URL_ = 'http://localhost:3000';
 
   function Location() {}
 
