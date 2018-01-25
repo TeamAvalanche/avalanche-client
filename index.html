@@ -23,8 +23,12 @@
 
 
     <script id="error-template" type="text/x-handlebars-template">
-        <h1>Error!</h1>
-        <p>Status: {{status}}. Status Details: {{statusText}}</p>
+        <header>
+            <img id="page-logo" src="images/logo.jpg" alt="Team Avalanche">
+        </header>
+        <h2>Oops!</h2>
+        <p>Status: {{status}}.</p>
+        <p>Status Text: {{statusText}}</p>
     </script>
 
     <meta property="og:url" content="" />
@@ -84,14 +88,14 @@
             <option value="cascade-west-north-baker">Mt. Baker</option>
             <option value="cascade-west-stevens-pass">Stevens Pass</option>
             <option value="cascade-west-snoqualmie-pass">Snoqualmie Pass</option>
-            <option value="cascade-west-central">Crystal/Mt. Rainier</option>
+            <option value="cascade-west-south">Crystal/Mt. Rainier</option>
         </select>
         </div>
         <div id="forecast-info"> 
             <p>Select your location from the dropdown above.</p>
         </div>
         <div id="more">
-            <h2>For more details about this forecast</h2>
+            <h2>For more details about today's forecast</h2>
     <p>Visit <a href="http://www.nwac.us/">NorthWest Avalanche Center</a></p>
         </div>
     </section>
