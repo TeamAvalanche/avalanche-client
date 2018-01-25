@@ -10,7 +10,7 @@ var app = app || {};
 
   const _API_URL_ = 'https://team-avalanche.herokuapp.com';
 
-  function Location() { }
+  function Location() {}
 
   Location.fetchRegion = (region, callback) => {
     return $.getJSON(_API_URL_ + '/nwac/' + region)
@@ -18,7 +18,13 @@ var app = app || {};
       .catch(errorCallback);
   };
 
+  Location.fetchScrape = (region, callback) => {
+    console.log(`http://localhost:3000/scrape/${region}`);
+    return $.getJSON('http://localhost:3000/scrape/' + region)
+      .then((temps) => callback(temps))
+      .catch(errorCallback);
+  };
+
   module.Location = Location;
 
 })(app);
-
