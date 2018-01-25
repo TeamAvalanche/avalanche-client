@@ -5,11 +5,11 @@ var app = app || {};
 (module => {
   function errorCallback(err) {
     console.error(err);
-    // app.errorView.initErrorPage(err);
+    app.errorView.initErrorPage(err);
   }
 
-  const _API_URL_ = 'https://team-avalanche.herokuapp.com';
-  // const _API_URL_ = 'http://localhost:3000';
+  // const _API_URL_ = 'https://team-avalanche.herokuapp.com';
+  const _API_URL_ = 'http://localhost:3000';
 
   function Location() {}
 
