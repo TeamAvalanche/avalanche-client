@@ -8,17 +8,21 @@ var app = app || {};
 
   const $view = $('#forecast-page');
 
-  forecastCreateView.displayForecast = (locationObject) => {
+  forecastCreateView.displayForecast = (locationObject, temps) => {
     $('#forecast-info').empty();
     let location = locationObject.objects[0].zones[0].zone_name;
     let summary = locationObject.objects[0].bottom_line_summary;
     let aboveDangerLevel = locationObject.objects[0].day1_danger_elev_high;
     let atDangerLevel = locationObject.objects[0].day1_danger_elev_middle;
+    let problemType = locationObject.objects[0].problems[0].problem_type.definition;
+    let splits = problemType.split('</p>', 1);
     let belowDangerLevel = locationObject.objects[0].day1_danger_elev_low;
     let problems = locationObject.objects[0].problems[0].likelihood;
     $('#forecast-info').append(`
     <h2>Location</h2>
     <p>${location}</p>
+    <h2>Weather</h2>
+    <p>${temps}</p>
     <h2>Bottom Line Summary</h2>
     <p>${summary}</p>
     <div class="triangle-container">
@@ -33,9 +37,18 @@ var app = app || {};
         </div>
     </div>
     <h2>Problems</h2>
-    ${problems}
-
+    <p>${splits}
     `);
+  };
+  
+  let fetchEverything = (region) => {
+    app.Location.fetchRegion(region, (locationObject) => {
+      //region fetched, now fetch scrape data
+      app.Location.fetchScrape(region, (temps) => {
+        //scrape fetched, now display forecast
+        forecastCreateView.displayForecast(locationObject, temps);
+      });
+    });
   };
 
   forecastCreateView.init = () => {
@@ -43,15 +56,15 @@ var app = app || {};
       let regionString = localStorage.getItem('region');
       let regionParsed = JSON.parse(regionString);
       console.log('region parsed local storage ', regionParsed);
-      app.Location.fetchRegion(regionParsed, forecastCreateView.displayForecast);
+      fetchEverything(regionParsed);
     }
     $view.show();
   };
 
-  $('#forecast-select').on('change', function(e) {
+  $('#forecast-select').on('change', function (e) {
     e.preventDefault();
     let region = $('#forecast-select').val();
-    app.Location.fetchRegion(region, forecastCreateView.displayForecast);
+    fetchEverything(region);
     let regionString = JSON.stringify(region);
     localStorage.setItem('region', regionString);
   });
