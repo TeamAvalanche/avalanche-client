@@ -96,33 +96,37 @@
             <header>
                 <img id="page-logo" src="images/logo.jpg" alt="Team Avalanche">
             </header>
+            <h2>Like Our App? Tell Us What You Think?</h2>
         <form id="feedback-form" action="" method="get" class="animated fadeInDown">
-            <p>Name:<br> 
-                <input type="text" id="name"name="name"/>
-            </p>
-            <p>E-mail:<br>
-                <input type="text" id="email" name="email"/>
-            </p>
-            <p>Location:</p>
+            <label for="name">Name:<lable></lable><br/> 
+            <input type="text" id="name"name="name"/>
+            <label for="email">E-mail:<label></label><br />
+            <input type="text" id="email" name="email"/>
+            <label>Location:</label>
             <select name="location" id="location">
                 <option value="cascade-west-north-baker">Mt. Baker</option>
                 <option value="cascade-west-stevens-pass">Stevens Pass</option>
                 <option value="cascade-west-snoqualmie-pass">Snoqualmie Pass</option>
                 <option value="cascade-west-central">Crystal/Mt. Rainier</option>
             </select>
-            <p>Comments:</p>
+            <label for="comments">Comments:</label>
             <textarea name="comments" id="comments"></textarea>
-            <p>Rating:
-                <br><br>
+            <label>Rating:</label><br>
                 <input type="radio" name="rating" value="1" checked="checked" /> 1
                 <input type="radio" name="rating" value="2" /> 2
                 <input type="radio" name="rating" value="3" /> 3
                 <input type="radio" name="rating" value="4" /> 4
                 <input type="radio" name="rating" value="5" /> 5
-            </p>
-            <input type="submit" name="submit" id="submit"/>
+            <button type="submit" name="submit" id="submit">Submit</button>
 
         </form>
+    </section>
+    <section id="thank-you-page" class="page">
+        <header>
+            <img id="page-logo" src="images/logo.jpg" alt="Team Avalanche">
+        </header>
+        <h1>Thank you for your feedback!</h1>
+        <p>We really appreciate it!</p>
     </section>
     <section class="error-view page"></section>
 
@@ -246,6 +250,7 @@
     <script src="models/location.js"></script>
     <script src="views/feedback-view.js"></script>
     <script src="views/about-view.js"></script>
+    <script src="views/thanks-view.js"></script>
     <script src="views/error-view.js"></script>
     <script src="controllers/routes.js"></script>
     <script src="views/dot-nav.js"></script>

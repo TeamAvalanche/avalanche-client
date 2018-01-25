@@ -65,9 +65,19 @@ button {
     border: solid 2px #2a405a;
 }
 
-select, input[type="text"] {
+select, input[type="text"], textarea {
     border: solid 1px #2a405a;
     padding: 0.25em 1em;
     font-size: 20px;
     width: 90%;
+    margin-bottom: 5%;
+}
+
+form {
+    padding-top: 5vh;
+}
+
+label {
+    font-size: 16px;
+    text-transform: uppercase;
 }

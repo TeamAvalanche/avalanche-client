@@ -7,15 +7,11 @@
 #comments {
   background-color: lightgray;
   width: 90%;
-  margin: 0 auto;
-  margin-top: -8%;
 }
 
 #location {
   border: 1px solid black;
   background-color: lightgray;
-  width: 90%;
-  margin: 0 auto;
 }   
 
 #feedback-form, #submit  {

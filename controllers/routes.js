@@ -29,4 +29,9 @@ page('/about', () => {
     app.aboutCreateView.init();
 });
 
+page('/thanks', () => {
+  $('.page').hide();
+  app.thankYou.init();
+});
+
 page.start();
