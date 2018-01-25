@@ -34,7 +34,6 @@ var app = app || {};
     </div>
     <h2>Problems</h2>
     ${problems}
-
     `);
   };
 
