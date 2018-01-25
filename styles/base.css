@@ -41,7 +41,7 @@ p {
     padding: 5% 10%;
 }
 
-p, li {
+p, li, a {
     text-align: left;
     font-size: 16px;
 }
