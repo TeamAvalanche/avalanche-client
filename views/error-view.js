@@ -5,7 +5,6 @@ var app = app || {};
 (function(module) {
   var errorView = {};
   errorView.initErrorPage = (err) => {
-    console.log('error status text' + err.statusText);
     $('.page').hide();
     $('#error-view').show();
     $('.error-view').empty();

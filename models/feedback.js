@@ -10,7 +10,7 @@ var app = app || {};
 
   function errorCallback(err) {
     console.error(err);
-    // app.errorView.initErrorPage(err);
+    app.errorView.initErrorPage(err);
   }
 
   Feedback.fetchAll = (callback) => $.getJSON(_API_URL_ + '/api/v1/feedback').then(data => callback(data)).catch(errorCallback);
