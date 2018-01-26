@@ -10,6 +10,10 @@
     text-align: center;
 }
 
+#nwac-logo {
+    width: 30%;
+}
+
 @media only screen and (min-width: 1000px) {
     #members {
         display: flex;

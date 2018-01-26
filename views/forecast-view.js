@@ -20,7 +20,6 @@ var app = app || {};
     } else if (region === 'cascade-west-south') {
       zone = 1;
     }
-    let locactionAbbr = locationObject.objects[0].zones[zone].zone_abbrev;
     let location = locationObject.objects[0].zones[zone].zone_name;
     let summary = locationObject.objects[0].bottom_line_summary;
     let aboveDangerLevel = locationObject.objects[0].day1_danger_elev_high;
@@ -30,7 +29,6 @@ var app = app || {};
     let belowDangerLevel = locationObject.objects[0].day1_danger_elev_low;
     $('#forecast-info').append(`
     <h2>Location:</h2>
-    <p>${locactionAbbr}</p>
     <p>${location}</p>
     <h2>Weather</h2>
     <p>${temps}</p>
@@ -51,7 +49,7 @@ var app = app || {};
     <p>${splits}</p>
     `);
   };
-  
+
   forecastCreateView.fetchEverything = (region) => {
     app.Location.fetchRegion(region, (locationObject) => {
       //region fetched, now fetch scrape data
