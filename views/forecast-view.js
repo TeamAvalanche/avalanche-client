@@ -10,17 +10,24 @@ var app = app || {};
 
   forecastCreateView.displayForecast = (locationObject, temps, region) => {
     $('#forecast-info').empty();
+    console.log('region', region, 'location', locationObject);
     let zone;
+    let locationName;
+    let locationDetail;
     if (region === 'cascade-west-north-baker') {
-      zone = 0;
+      locationDetail = 'West Slopes Central - Skagit River to South of I-90';
+      locationName = 'Mt. Baker';
     } else if (region === 'cascade-west-stevens-pass') {
-      zone = 2;
+      locationDetail = 'Stevens Pass';
+      locationName = 'Stevens Pass';
     } else if (region === 'cascade-west-snoqualmie-pass') {
-      zone = 3;
+      locationDetail = 'Snoqualmie Pass';
+      locationName = 'Snoqualmie Pass';
     } else if (region === 'cascade-west-south') {
-      zone = 1;
+      locationDetail = 'West Slopes South - South of I-90 to Columbia River';
+      locationName = 'Crystal/Mt. Rainier';
     }
-    let location = locationObject.objects[0].zones[zone].zone_name;
+
     let summary = locationObject.objects[0].bottom_line_summary;
     let aboveDangerLevel = locationObject.objects[0].day1_danger_elev_high;
     let atDangerLevel = locationObject.objects[0].day1_danger_elev_middle;
@@ -28,12 +35,13 @@ var app = app || {};
     let splits = problemType.split('</p>', 1);
     let belowDangerLevel = locationObject.objects[0].day1_danger_elev_low;
     $('#forecast-info').append(`
-    <h2>Location:</h2>
-    <p>${location}</p>
+
+    <h2>${locationName}</h2>
+    <p>${locationDetail}</p>
     <h2>Weather</h2>
     <p>${temps}</p>
     <h2>Bottom Line Summary</h2>
-    <p>${summary}</p>
+    ${summary}
     <div class="triangle-container">
         <div class="triangle-holder">
             <img class="triangles" src="images/above-treeline.png"><p id="above-treeline" class="${aboveDangerLevel}">${aboveDangerLevel}</p>
