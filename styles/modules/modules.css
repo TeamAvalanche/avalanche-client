@@ -55,9 +55,17 @@
     font-size: 20px;
     margin: 0;
 }
+#how-to {
+    width: 80%;
+}
 
 @media only screen and (min-width: 1000px) {
     #page-logo {
         width: 75px;
+    }
+    #how-to {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto; 
     }
 }
