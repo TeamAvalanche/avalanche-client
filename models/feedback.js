@@ -16,7 +16,6 @@ var app = app || {};
   Feedback.fetchAll = (callback) => $.getJSON(_API_URL_ + '/api/v1/feedback').then(data => callback(data)).catch(errorCallback);
 
   Feedback.create = feedback => {
-    console.log('feedback created from: ' + feedback.name);
     return $.post(_API_URL_ + '/api/v1/feedback', feedback).catch(errorCallback);
   };
 
