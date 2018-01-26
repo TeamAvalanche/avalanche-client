@@ -29,12 +29,18 @@
 #### <a name="homepage"></a>Homepage
 ![gif of app](# "Step 1a")
 ##### Getting your forecast information
+![screenshot of homepage](images/homepage.png "Step 1")
 1. Press the "Get Started" button above or select the Snowflake from the menu at the bottom.
+![screenshot of location select](images/location-select.png "Step 2")
 2. Next, you will select the region you want to display. Once the location is chosen you will see current weather/avalanche information directly from "NWAC" It's that easy!!!!
+![screenshot of location output](images/location-output.png "Step 2")
 
 ##### Leaving your feedback
+![screenshot of feedback form select](images/feedback-select.png "Step 3")
 3. To leave your review or user feedback, click on the Comments Icon on the bottom right.
+![screenshot of feedback form](images/form.png "Step 4")
 4. Fill in your information on the form (please don't leave any sensitive information!). Your review will populate with other reviews randomly on the home page.
+![screenshot of feedback form submit](images/submit.png "Step 5")
 5. Click "Submit" and you will be taken to a thank you page.
 
 # <a name="details"></a> More Project Details
