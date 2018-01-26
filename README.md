@@ -27,7 +27,7 @@
 
 ## <a name="how-to-use"></a>How to Use This Team Avalanche App
 #### <a name="homepage"></a>Homepage
-![gif of app](# "Step 1a")
+![gif of app](https://media.giphy.com/media/xUNda2PKnJshuw0RzO/giphy.gif "Step 1a")
 ##### Getting your forecast information
 ![screenshot of homepage](images/homepage.png "Step 1")
 1. Press the "Get Started" button above or select the Snowflake from the menu at the bottom.
@@ -49,16 +49,17 @@
 A mobile-first web app that displays quick avalanche risk region information.
 
 ## Problem to be Solved
-The Northwest Avalanch Center provides up-to-date and accurate information for people who want to explore the mountain areas but there is a lot of information that can be harder or more time consuming to navigate through or try to understands.
+The North West Avalanche Center provides up-to-date and accurate information for people who want to travel in the backcountry, but there is a lot of information difficult to digest making it time consuming to understand and navigate through.
 
 ## Benefits:
-* Quick overview of a region's conditions.
+* A quick, detailed, mobile overview with the most important information to make a decision on whether it is safe or not to travel in the backcountry based off region conditions.
 
 ## Misc.
-* 
+*
 
 # Special Thanks to
-* [Northwest Avalanch Center](https://www.nwac.us/) for letting our team use their API!
+* [North West Avalanche Center](https://www.nwac.us/) for letting our team use your API!
+* [The Weather Channel](https://www.weather.com) for providing us the weather data to scrape. 
 * [Nicolas Gallagher](https://github.com/necolas) for normalize.css
 * [Font Awesome by Dave Gandy](http://fontawesome.io) for Font Awesome icons.
 * [Dot Navigation by Chris](https://codepen.io/zuhloobie/pen/RaLJOK) See the side navigation on our Forecast page.
