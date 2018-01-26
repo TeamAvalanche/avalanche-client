@@ -26,7 +26,6 @@ var app = app || {};
       locationDetail = 'West Slopes South - South of I-90 to Columbia River';
       locationName = 'Crystal/Mt. Rainier';
     }
-
     let summary = locationObject.objects[0].bottom_line_summary;
     let aboveDangerLevel = locationObject.objects[0].day1_danger_elev_high;
     let atDangerLevel = locationObject.objects[0].day1_danger_elev_middle;
@@ -34,7 +33,6 @@ var app = app || {};
     let splits = problemType.split('</p>', 1);
     let belowDangerLevel = locationObject.objects[0].day1_danger_elev_low;
     $('#forecast-info').append(`
-
     <h2>${locationName}</h2>
     <p>${locationDetail}</p>
     <h2>Weather</h2>
