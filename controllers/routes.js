@@ -3,7 +3,7 @@
 var app = app || {};
 
 if (window.location.pathname !== '/') {
-  page.base('https://teamavalanche.github.io');
+  page.base('/avalanche-client');
 }
 
 page('/*', (ctx, next) => {
