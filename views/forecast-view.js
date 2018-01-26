@@ -35,7 +35,7 @@ var app = app || {};
     <h2>Weather</h2>
     <p>${temps}</p>
     <h2>Bottom Line Summary</h2>
-    <p>${summary}</p>
+    ${summary}
     <div class="triangle-container">
         <div class="triangle-holder">
             <img class="triangles" src="images/above-treeline.png"><p id="above-treeline" class="${aboveDangerLevel}">${aboveDangerLevel}</p>
