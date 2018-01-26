@@ -10,20 +10,19 @@ var app = app || {};
 
   forecastCreateView.displayForecast = (locationObject, temps, region) => {
     $('#forecast-info').empty();
-    let zone;
     let locationName;
     let locationDetail;
     if (region === 'cascade-west-north-baker') {
-      locationDetail = 'West Slopes Central - Skagit River to South of I-90';
+      locationDetail = 'This forecast covers the Cascade West North - Canadian Border to Skagit River area.';
       locationName = 'Mt. Baker';
     } else if (region === 'cascade-west-stevens-pass') {
-      locationDetail = 'Stevens Pass';
+      locationDetail = 'This forecast covers the Cascade Pass - Stevens Pass area.';
       locationName = 'Stevens Pass';
     } else if (region === 'cascade-west-snoqualmie-pass') {
-      locationDetail = 'Snoqualmie Pass';
+      locationDetail = 'This forecast covers the Cascade Pass - Snoqualmie Pass area.';
       locationName = 'Snoqualmie Pass';
     } else if (region === 'cascade-west-south') {
-      locationDetail = 'West Slopes South - South of I-90 to Columbia River';
+      locationDetail = 'This forecast covers the Cascade West - South of I-90 to Columbia River area.';
       locationName = 'Crystal/Mt. Rainier';
     }
     let summary = locationObject.objects[0].bottom_line_summary;
