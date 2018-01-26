@@ -25,11 +25,7 @@ var app = app || {};
     } else if (region === 'cascade-west-south') {
       locationDetail = 'West Slopes South - South of I-90 to Columbia River';
       locationName = 'Crystal/Mt. Rainier';
-    }
-<<<<<<< HEAD
-    let location = locationObject.objects[0].zones[zone].zone_name;
-=======
->>>>>>> 8822e5ac773deea9c365c301b10712ca4b8ff8cc
+
     let summary = locationObject.objects[0].bottom_line_summary;
     let aboveDangerLevel = locationObject.objects[0].day1_danger_elev_high;
     let atDangerLevel = locationObject.objects[0].day1_danger_elev_middle;
@@ -37,13 +33,9 @@ var app = app || {};
     let splits = problemType.split('</p>', 1);
     let belowDangerLevel = locationObject.objects[0].day1_danger_elev_low;
     $('#forecast-info').append(`
-<<<<<<< HEAD
-    <h2>Location:</h2>
-    <p>${location}</p>
-=======
+    
     <h2>${locationName}</h2>
     <p>${locationDetail}</p>
->>>>>>> 8822e5ac773deea9c365c301b10712ca4b8ff8cc
     <h2>Weather</h2>
     <p>${temps}</p>
     <h2>Bottom Line Summary</h2>
