@@ -10,7 +10,6 @@ var app = app || {};
 
   forecastCreateView.displayForecast = (locationObject, temps, region) => {
     $('#forecast-info').empty();
-    console.log('region', region, 'location', locationObject);
     let zone;
     let locationName;
     let locationDetail;
@@ -52,7 +51,7 @@ var app = app || {};
         </div>
     </div>
     <h2>Problems</h2>
-    <p>${splits}</p>
+    ${splits}
     `);
   };
   
