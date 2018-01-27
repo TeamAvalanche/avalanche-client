@@ -8,7 +8,6 @@
 * [Technologies Used](#technologies)
 * [How to use this App](#how-to-use)
   * [Homepage](#homepage)
-  * 
 * [More Project Details](#details)
 
 # <a name="team"></a>Team Members
@@ -16,7 +15,6 @@
 * "Amber Kim" <https://github.com/amgranad>
 * "Arthur Allen" <https://github.com/ErmineNotyours>
 * "Brandon Buchholz" <https://github.com/bjbuchholz>
-
 
 ## <a name="technologies"></a>Technologies
 * **Front-end**: [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript),  [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5), [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3), [Page.js](https://visionmedia.github.io/page.js/), [Handlebars](http://handlebarsjs.com/)
@@ -49,16 +47,13 @@
 A mobile-first web app that displays quick avalanche risk region information.
 
 ## Problem to be Solved
-The North West Avalanche Center provides up-to-date and accurate information for people who want to travel in the backcountry, but there is a lot of information difficult to digest making it time consuming to understand and navigate through.
+The Northwest Avalanche Center provides up-to-date and accurate information for people who want to travel in the backcountry, but there is a lot of information difficult to digest making it time consuming to understand and navigate through.
 
 ## Benefits:
 * A quick, detailed, mobile overview with the most important information to make a decision on whether it is safe or not to travel in the backcountry based off region conditions.
 
-## Misc.
-*
-
 # Special Thanks to
-* [North West Avalanche Center](https://www.nwac.us/) for letting our team use your API!
+* [Northwest Avalanche Center](https://www.nwac.us/) for letting our team use your API!
 * [The Weather Channel](https://www.weather.com) for providing us the weather data to scrape. 
 * [Nicolas Gallagher](https://github.com/necolas) for normalize.css
 * [Font Awesome by Dave Gandy](http://fontawesome.io) for Font Awesome icons.
