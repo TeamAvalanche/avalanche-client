@@ -40,13 +40,25 @@ var app = app || {};
     ${summary}
     <div class="triangle-container">
         <div class="triangle-holder">
-            <img class="triangles" src="images/above-treeline.png"><p id="above-treeline" class="${aboveDangerLevel}">${aboveDangerLevel}</p><p>Above Treeline</p>
+            <img class="triangles" src="images/above-treeline.png">
+            <div>
+              <p id="above-treeline" class="${aboveDangerLevel}">${aboveDangerLevel}</p>
+              <p>Above Treeline</p>
+            </div>
         </div>
         <div class="triangle-holder">
-            <img class="triangles" src="images/at-treeline.png"><p id="at-treeline" class="${atDangerLevel}">${atDangerLevel}</p><p>Near Treeline</p>
+            <img class="triangles" src="images/at-treeline.png">
+            <div>
+              <p id="at-treeline" class="${atDangerLevel}">${atDangerLevel}</p>
+              <p>Near Treeline</p>
+            </div>
         </div>
         <div class="triangle-holder">
-            <img class="triangles" src="images/below-treeline.png"><p id="below-treeline" class="${belowDangerLevel}">${belowDangerLevel}</p><p>Below Treeline</p>
+            <img class="triangles" src="images/below-treeline.png">
+            <div>
+              <p id="below-treeline" class="${belowDangerLevel}">${belowDangerLevel}</p>
+              <p>Below Treeline</p>
+            </div>
         </div>
     </div>
     <h2>Problems</h2>
