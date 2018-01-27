@@ -32,7 +32,10 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+}
+.triangle-holder p {
+  margin: 0;
 }
 
 .triangles {
